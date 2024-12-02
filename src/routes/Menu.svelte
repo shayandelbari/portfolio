@@ -69,7 +69,7 @@
 		class="flex h-auto w-full flex-row justify-between border-b-[1px] border-b-gray-200 bg-white/70 bg-noise p-5 bg-blend-lighten backdrop-blur-md dark:border-b-gray-900 dark:bg-black/70 dark:bg-blend-darken"
 	>
 		<ul class="flex">
-			<li>
+			<li class="my-auto">
 				<a href="/"><strong>Shayan</strong> Delbari</a>
 			</li>
 		</ul>
