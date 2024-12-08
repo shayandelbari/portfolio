@@ -1,16 +1,35 @@
 export interface Project {
 	name: string;
 	description: string;
-	// image: string;
+	image: {
+		src: string;
+		alt: string;
+	};
 	// url: string;
-	// category: 'web development' | 'web design' | 'mobile design' | 'python';
+	// category: 'web development' | 'web design' | 'mobile design' | 'python' | 'rust';
 }
 
 const projects: Project[] = [
-	{ name: 'Project 1', description: 'This is a project that I have worked on.' },
-	{ name: 'Project 2', description: 'This is a project that I have worked on.' },
-	{ name: 'Project 3', description: 'This is a project that I have worked on.' },
-	{ name: 'Project 4', description: 'This is a project that I have worked on.' }
+	{
+		name: 'Project 1',
+		image: { src: 'src/assets/project/testImg.jpg', alt: 'project alt' },
+		description: 'This is a project that I have worked on.'
+	},
+	{
+		name: 'Project 2',
+		image: { src: 'src/assets/project/testImg.jpg', alt: 'project alt' },
+		description: 'This is a project that I have worked on.'
+	},
+	{
+		name: 'Project 3',
+		image: { src: 'src/assets/project/testImg.jpg', alt: 'project alt' },
+		description: 'This is a project that I have worked on.'
+	},
+	{
+		name: 'Project 4',
+		image: { src: 'src/assets/project/testImg.jpg', alt: 'project alt' },
+		description: 'This is a project that I have worked on.'
+	}
 ];
 
 export default projects;
