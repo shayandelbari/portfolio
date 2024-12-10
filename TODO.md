@@ -7,7 +7,7 @@
 - [x] set the primary and secondary color in tailwind config file.
 - [x] add a circle in that lines up with the company title.
 - [ ] add page functionality to the project section.
-- [ ] add pop-up for when user click the projects.
+- [x] add pop-up for when user click the projects.
 - [x] implement smooth the scrolling for the anchor links.
 - [x] add a change theme button.
     > the theme is now set to dark as default, maybe I can set it to user's preference.
