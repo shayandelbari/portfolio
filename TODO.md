@@ -13,4 +13,5 @@
     > the theme is now set to dark as default, maybe I can set it to user's preference.
 - [x] add the functionality to highlight the active section.
 - [x] add animation for the toTop component.
-- [ ] use transitions for displaying popups.
+- [x] use transitions for displaying popups.
+- [ ] add smooth scrolling for `Shayan Delbari` that links to top of the page.

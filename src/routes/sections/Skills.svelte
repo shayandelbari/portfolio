@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SkillCard from '../components/skillCard.svelte';
+	import SkillCard from '../../components/skillCard.svelte';
 	import skills from '$lib/skills';
 </script>
 

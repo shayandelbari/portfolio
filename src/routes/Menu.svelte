@@ -79,7 +79,7 @@
 				<li class="my-auto">
 					<a
 						href={item.link}
-						on:click={handleClick}
+						onclick={handleClick}
 						class="transition-colors duration-200 hover:text-primary
 						{item.isActive ? 'font-bold text-primary' : ''}"
 					>
