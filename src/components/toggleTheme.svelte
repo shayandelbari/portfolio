@@ -7,7 +7,11 @@
 	};
 </script>
 
-<button aria-label="Toggle theme" onclick={toggleTheme} class="visible h-fit w-fit">
+<button
+	aria-label="Toggle theme"
+	onclick={toggleTheme}
+	class="h-fit w-fit rounded border border-black/30 hover:border-black hover:shadow-md dark:border-white/30 dark:shadow-white/20 dark:hover:border-white"
+>
 	{#if dark}
 		<!-- Sun Icon -->
 		<svg

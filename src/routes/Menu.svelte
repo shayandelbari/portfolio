@@ -66,7 +66,7 @@
 
 <div class="sticky top-0 z-10">
 	<nav
-		class="flex h-auto w-full flex-row justify-between border-b-[1px] border-b-gray-200 bg-white/70 p-5 bg-blend-lighten drop-shadow-lg backdrop-blur-md dark:border-b-gray-900 dark:bg-black/70 dark:bg-blend-darken"
+		class="flex h-auto w-full flex-row justify-between border-b border-b-gray-200 bg-white/70 p-5 bg-blend-lighten shadow-lg shadow-black/5 backdrop-blur-md dark:border-b-gray-900 dark:bg-black/70 dark:bg-blend-darken"
 	>
 		<ul class="flex">
 			<li class="my-auto">
