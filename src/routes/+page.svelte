@@ -7,6 +7,11 @@
 	import Skills from './sections/Skills.svelte';
 </script>
 
+<svelte:head>
+	<title>Shayan Delbari Portfolio</title>
+	<meta name="description" content="This website is Shayan Delbari's portfolio" />
+</svelte:head>
+
 <section id="hero">
 	<Hero />
 </section>
