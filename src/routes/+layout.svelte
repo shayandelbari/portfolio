@@ -8,6 +8,6 @@
 
 <Menu />
 
-{@render children()}
+<main>{@render children()}</main>
 
 <ToTop showAt={100} />

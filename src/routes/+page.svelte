@@ -7,28 +7,26 @@
 	import Skills from './sections/Skills.svelte';
 </script>
 
-<main>
-	<section id="hero">
-		<Hero />
-	</section>
+<section id="hero">
+	<Hero />
+</section>
 
-	<section id="about" class="px-5">
-		<About />
-	</section>
+<section id="about" class="px-5">
+	<About />
+</section>
 
-	<section id="experience" class="px-5">
-		<Experience />
-	</section>
+<section id="experience" class="px-5">
+	<Experience />
+</section>
 
-	<section id="skills" class="px-5">
-		<Skills />
-	</section>
+<section id="skills" class="px-5">
+	<Skills />
+</section>
 
-	<section id="projects" class="px-5">
-		<Projects />
-	</section>
+<section id="projects" class="px-5">
+	<Projects />
+</section>
 
-	<section id="contact" class="px-5">
-		<Contact />
-	</section>
-</main>
+<section id="contact" class="px-5">
+	<Contact />
+</section>
