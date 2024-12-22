@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SkillCard from '../../components/skillCard.svelte';
-	import skills from '$lib/skills';
+	import SkillCard from '$lib/components/skillCard.svelte';
+	import skills from '$lib/data/skills';
 </script>
 
 <h1 class="mt-5 text-2xl font-semibold">Skills</h1>

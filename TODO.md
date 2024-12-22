@@ -1,5 +1,7 @@
 # TODO-list
 
+## Improvement
+
 - [x] make the menu stick to the top of the page after scrolled out of view.
   - [ ] this effect is implemented with CSS and could be improved by using JS
 - [x] experience section should have the line inside the component and not outside!
@@ -15,3 +17,7 @@
 - [x] add animation for the toTop component.
 - [x] use transitions for displaying popups.
 - [ ] add smooth scrolling for `Shayan Delbari` that links to top of the page.
+
+## Problems
+
+- [ ] The menu highlights `about` when view is on the Hero section.

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import ToggleTheme from '../components/toggleTheme.svelte';
+	import ToggleTheme from '$lib/components/toggleTheme.svelte';
 
 	let menuItems = [
 		{ name: 'About', link: '#about', isActive: false },

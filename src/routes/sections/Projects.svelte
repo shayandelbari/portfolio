@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ProjectCard from '../../components/projectCard.svelte';
-	import projects from '$lib/projects';
+	import ProjectCard from '$lib/components/projectCard.svelte';
+	import projects from '$lib/data/projects';
 </script>
 
 <h1 class="mt-5 text-2xl font-semibold">Projects</h1>
