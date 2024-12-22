@@ -1,5 +1,5 @@
 <script lang="ts">
-	import image from '$lib/images/Shayan.png?enhanced';
+	import image from '$lib/images/profile.png?enhanced';
 </script>
 
 <div class="flex min-h-[90vh]">
