@@ -3,8 +3,8 @@
 </script>
 
 <div class="flex min-h-[90vh]">
-	<div class="mx-[6vh] flex w-full flex-row justify-between">
-		<div class="my-auto">
+	<div class="mx-[6vh] flex w-full flex-row items-center justify-between">
+		<div>
 			<h1 class="font-mono text-5xl font-black">
 				Hi there,<br />my name is Shayan
 			</h1>
@@ -14,7 +14,7 @@
 				project I work on.
 			</p>
 		</div>
-		<div class="my-auto">
+		<div>
 			<enhanced:img src={image} alt="An alt text" class="my-auto h-fit w-[40vh]" />
 		</div>
 	</div>
