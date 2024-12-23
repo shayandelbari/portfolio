@@ -17,19 +17,24 @@
 	};
 </script>
 
-<div class="h-auto w-auto rounded-md border border-black/50 p-2 dark:border-white/50">
-	<div class="flex justify-between">
-		<p class="my-auto">{project.name}</p>
-		<button
-			onclick={openPopup}
-			aria-label="Show popup"
-			class="rounded-md border border-black/50 hover:bg-black dark:border-white/50 dark:hover:bg-white"
-		>
-			<Expand class="fill-black hover:fill-white dark:fill-white dark:hover:fill-black" />
-		</button>
+{#if project.isFirstPage}
+	<div
+		class="h-auto w-auto overflow-clip rounded-md border border-black/50 drop-shadow-md dark:border-white/50"
+	>
+		<img src={project.image.src} alt={project.image.alt} />
+		<div class="p-3">
+			<h3 class="text-xl font-semibold">{project.name}</h3>
+			<p class="mt-1">{@html project.shortDescription}</p>
+			<button
+				onclick={openPopup}
+				aria-label="Show popup"
+				class="mt-4 w-full items-center rounded-md border border-gray-500 bg-gray-500/70 bg-opacity-70 p-2 drop-shadow-md hover:bg-gray-500 dark:border-gray-800 dark:bg-gray-800/70 hover:dark:bg-gray-800"
+			>
+				Show more
+			</button>
+		</div>
 	</div>
-	<p>{@html project.description}</p>
-</div>
+{/if}
 
 <svelte:window
 	onkeydown={(e) => {
