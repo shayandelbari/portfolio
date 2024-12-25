@@ -8,7 +8,7 @@
 - [ ] add a noise texture to background of certain components.
 - [x] set the primary and secondary color in tailwind config file.
 - [x] add a circle in that lines up with the company title.
-- [ ] add page functionality to the project section.
+- [ ] ~~add page functionality to the project section.~~
 - [x] add pop-up for when user click the projects.
 - [x] implement smooth the scrolling for the anchor links.
 - [x] add a change theme button.
@@ -20,4 +20,4 @@
 
 ## Problems
 
-- [ ] The menu highlights `about` when view is on the Hero section.
+- [ ] The menu highlights `about` when view is on the Hero section after the page is scrolled.
