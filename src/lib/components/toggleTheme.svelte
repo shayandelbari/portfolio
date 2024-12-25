@@ -13,7 +13,7 @@
 <button
 	aria-label="Toggle theme"
 	onclick={toggleTheme}
-	class="h-fit w-fit rounded border border-black/30 p-1 hover:border-black hover:shadow-md dark:border-white/30 dark:shadow-white/20 dark:hover:border-white"
+	class="h-fit w-fit rounded border border-black/30 bg-white p-1 hover:border-black hover:shadow-md dark:border-white/30 dark:bg-black dark:shadow-white/20 dark:hover:border-white"
 >
 	{#if dark}
 		<Sun class="stroke-white" />

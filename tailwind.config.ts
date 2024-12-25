@@ -10,6 +10,9 @@ export default {
 				black: '#121212', // couldn't find a better way :(
 				gray: { 900: '#1f1f1f' },
 				primary: '#16a34a'
+			},
+			backgroundImage: {
+				noise: "url('src/lib/images/noise.svg')"
 			}
 		}
 	},
