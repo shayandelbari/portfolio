@@ -1,5 +1,4 @@
 <script lang="ts">
-	import image from '$lib/images/profile.png?enhanced';
 </script>
 
 <div class="flex min-h-[90vh]">
@@ -13,9 +12,6 @@
 				With a background in both development and design, I bring a unique perspective to every
 				project I work on.
 			</p>
-		</div>
-		<div>
-			<enhanced:img src={image} alt="An alt text" class="my-auto h-fit w-[40vh]" />
 		</div>
 	</div>
 </div>
