@@ -5,6 +5,8 @@
 	let { project, popup = true }: { project: Project; popup?: boolean } = $props();
 	let show: boolean = $state(false);
 
+	const image = project.image.src;
+
 	const openPopup = () => {
 		show = true;
 		document.documentElement.classList.add('overflow-hidden');
@@ -16,7 +18,7 @@
 >
 	<h3 class="text-center text-2xl font-bold">{project.name}</h3>
 	<img
-		src={project.image.src}
+		src={image}
 		alt={project.image.alt}
 		class="mt-4 overflow-clip rounded-md border border-black/50 drop-shadow-md dark:border-white/50"
 	/>
