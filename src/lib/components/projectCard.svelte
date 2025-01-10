@@ -16,8 +16,8 @@
 >
 	<h3 class="text-center text-2xl font-bold">{project.name}</h3>
 	<img
-		src={project.image.src}
-		alt={project.image.alt}
+		src={project.thumbnail.src}
+		alt={project.thumbnail.alt}
 		class="mt-4 overflow-clip rounded-md border border-black/50 drop-shadow-md dark:border-white/50"
 	/>
 	<p class="mt-2 text-gray-500">{@html project.shortDescription}</p>

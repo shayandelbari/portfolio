@@ -1,9 +1,16 @@
 import testImage from '$lib/images/projects/testImg.jpg';
+import InvestSmart from '$lib/images/projects/InvestSmart.png';
+import InvestSmartThumbnail from '$lib/images/projects/InvestSmart-thumbnail.png';
+import InvestSmartDescription from '$lib/data/description/InvestSmart.html?raw';
 
 export interface Project {
 	name: string;
 	description: string;
 	image: {
+		src: string;
+		alt: string;
+	};
+	thumbnail: {
 		src: string;
 		alt: string;
 	};
@@ -17,10 +24,10 @@ export interface Project {
 const projects: Project[] = [
 	{
 		isFirstPage: true,
-		name: 'Project 1',
-		image: { src: testImage, alt: 'project alt' },
-		description:
-			'Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus ultricies malesuada rutrum rutrum maximus. Fames commodo nulla ex volutpat porttitor. Quisque auctor purus bibendum molestie gravida. Adipiscing nisl imperdiet dui; condimentum velit eleifend phasellus nulla. Ultrices placerat scelerisque tempor consectetur id sodales accumsan euismod. Nisl sit quam facilisi; bibendum adipiscing etiam. Mollis feugiat aliquet pellentesque nisl commodo ut odio mattis.',
+		name: 'InvestSmart Academy',
+		image: { src: InvestSmart, alt: 'Invest Smart academy mockup of the first page' },
+		thumbnail: { src: InvestSmartThumbnail, alt: 'Invest Smart academy thumbnail' },
+		description: InvestSmartDescription,
 		shortDescription: 'This is a small description',
 		skills: ['python', 'rust']
 	},
@@ -28,6 +35,7 @@ const projects: Project[] = [
 		isFirstPage: true,
 		name: 'Project 2',
 		image: { src: testImage, alt: 'project alt' },
+		thumbnail: { src: testImage, alt: 'project alt' },
 		description: 'This is a project that I have worked on.',
 		shortDescription: 'This is a small description',
 		skills: ['python', 'rust']
@@ -36,6 +44,7 @@ const projects: Project[] = [
 		isFirstPage: true,
 		name: 'Project 3',
 		image: { src: testImage, alt: 'project alt' },
+		thumbnail: { src: testImage, alt: 'project alt' },
 		description: 'This is a project that I have worked on.',
 		shortDescription: 'This is a small description',
 		skills: ['python', 'rust']
@@ -43,6 +52,7 @@ const projects: Project[] = [
 	{
 		name: 'Project 4',
 		image: { src: testImage, alt: 'project alt' },
+		thumbnail: { src: testImage, alt: 'project alt' },
 		description: 'This is a project that I have worked on.',
 		shortDescription: 'This is a small description',
 		skills: ['python', 'rust']
