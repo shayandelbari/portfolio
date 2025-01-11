@@ -27,10 +27,10 @@
 			onclick={(e) => {
 				e.stopPropagation();
 			}}
-			class="m-auto h-screen w-screen overflow-clip rounded-md border border-black/50 bg-white shadow-xl dark:border-gray-900 dark:bg-black sm:h-fit sm:w-fit"
+			class="border-gray-100 dark:border-gray-900 m-auto h-screen w-screen overflow-clip rounded-md border bg-white shadow-xl dark:bg-black sm:h-fit sm:w-fit"
 		>
 			<div
-				class="sticky top-0 flex min-h-[10vh] flex-row items-center justify-between border-b border-gray-900 bg-white p-4 dark:bg-black"
+				class="border-gray-100 dark:border-gray-900 sticky top-0 flex min-h-[10vh] flex-row items-center justify-between border-b bg-white p-4 dark:bg-black"
 			>
 				<h1>{project.name}</h1>
 				<button onclick={closePopup}><X class="stroke-black dark:stroke-white" /></button>

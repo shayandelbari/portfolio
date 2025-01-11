@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="h-auto w-auto select-none rounded-md border-[1px] border-black px-2 py-1 font-mono dark:border-white"
+	class="h-auto w-auto select-none rounded-md border border-black px-2 py-1 font-mono dark:border-white"
 >
 	{skill.name}
 </div>

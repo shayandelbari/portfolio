@@ -5,16 +5,16 @@ export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: 'class',
 	theme: {
-		extend: {
-			typography: {},
-			colors: {
-				white: '#fafafa',
-				black: '#121212', // couldn't find a better way :(
-				gray: { 900: '#1f1f1f' },
-				primary: '#16a34a'
+		colors: {
+			white: '#fafafa',
+			black: '#121212',
+			gray: {
+				100: '#d1d5db',
+				900: '#1f1f1f'
 			},
-			backgroundImage: {
-				noise: 'url("src/lib/images/noise.svg")'
+			primary: '#16a34a',
+			text: {
+				secondary: '#6b7280'
 			}
 		}
 	},
