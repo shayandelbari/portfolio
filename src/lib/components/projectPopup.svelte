@@ -22,15 +22,15 @@
 	class="fixed left-0 top-0 z-20 mx-auto my-auto flex h-screen w-screen items-center justify-center bg-white/70 dark:bg-black/70"
 	onclick={closePopup}
 >
-	<div transition:scale={{ duration: 300 }}>
+	<div transition:scale={{ duration: 300 }} class="overflow-auto">
 		<div
 			onclick={(e) => {
 				e.stopPropagation();
 			}}
-			class="border-gray-100 dark:border-gray-900 m-auto h-screen w-screen overflow-clip rounded-md border bg-white shadow-xl dark:bg-black sm:h-fit sm:w-fit"
+			class="m-auto h-screen w-screen overflow-clip rounded-md border border-gray-100 bg-white shadow-xl dark:border-gray-900 dark:bg-black sm:h-fit sm:w-fit"
 		>
 			<div
-				class="border-gray-100 dark:border-gray-900 sticky top-0 flex min-h-[10vh] flex-row items-center justify-between border-b bg-white p-4 dark:bg-black"
+				class="sticky top-0 flex min-h-[10vh] flex-row items-center justify-between border-b border-gray-100 bg-white p-4 dark:border-gray-900 dark:bg-black"
 			>
 				<h1>{project.name}</h1>
 				<button onclick={closePopup}><X class="stroke-black dark:stroke-white" /></button>
@@ -43,7 +43,7 @@
 						class="h-[80vh] w-full object-cover"
 					/>
 				</div>
-				<div class="sticky top-[10vh] h-fit flex-auto items-center p-4">
+				<div class="items-center p-4">
 					<article class="prose prose-neutral max-w-prose dark:prose-invert">
 						{@html project.description}
 					</article>
