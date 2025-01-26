@@ -4,7 +4,7 @@
 <div class="flex min-h-[90vh]">
 	<div class="mx-[6vh] flex w-full flex-row items-center justify-between">
 		<div>
-			<h1 class="font-mono text-5xl font-black">
+			<h1 class="text-5xl font-black">
 				Hi there,<br />my name is Shayan
 			</h1>
 			<p class="mt-5 max-w-prose">

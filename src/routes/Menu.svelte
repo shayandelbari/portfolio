@@ -9,7 +9,7 @@
 	import Linkedin from '$lib/icons/linkedin.svelte';
 
 	let menuItems = $state([
-		{ name: 'About', link: '#about', isActive: false },
+		// { name: 'About', link: '#about', isActive: false },
 		{ name: 'Experience', link: '#experience', isActive: false },
 		{ name: 'Skills', link: '#skills', isActive: false },
 		{ name: 'Projects', link: '#projects', isActive: false },

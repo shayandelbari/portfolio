@@ -16,9 +16,9 @@
 	<Hero />
 </section>
 
-<section id="about" class="px-5">
+<!-- <section id="about" class="px-5">
 	<About />
-</section>
+</section> -->
 
 <section id="experience" class="px-5">
 	<Experience />

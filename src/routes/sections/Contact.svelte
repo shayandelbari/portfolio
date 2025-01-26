@@ -8,7 +8,7 @@
 <div
 	class="w-full rounded border border-gray-100 bg-gray-100/50 p-6 dark:border-gray-900 dark:bg-gray-900/50"
 >
-	<h1 class="font-mono text-3xl font-black">Contact me</h1>
+	<h1 class="text-3xl font-black">Contact me</h1>
 	<div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
 		<p>
 			If you have any interesting idea for a project and want to collaborate feel free to email me
@@ -22,7 +22,7 @@
 			>
 		</div>
 		<div>
-			<h3 class="font-mono">My socials</h3>
+			<h3>My socials</h3>
 			<div class="mt-1 flex flex-row space-x-4">
 				<a href="mailto:shayan.32.delbari@gmail.com"
 					><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
