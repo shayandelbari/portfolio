@@ -32,6 +32,6 @@
 	<Projects />
 </section>
 
-<section id="contact" class="px-5">
+<section id="contact" class="mt-4 p-5">
 	<Contact />
 </section>

@@ -3,6 +3,10 @@
 	import ToggleTheme from '$lib/components/toggleTheme.svelte';
 	import Bars_3 from '$lib/icons/bars-3.svelte';
 	import { fade, fly } from 'svelte/transition';
+	import Github from '$lib/icons/github.svelte';
+	import Resume from '$lib/data/Resume.pdf';
+	import Email from '$lib/icons/email.svelte';
+	import Linkedin from '$lib/icons/linkedin.svelte';
 
 	let menuItems = $state([
 		{ name: 'About', link: '#about', isActive: false },
@@ -81,14 +85,9 @@
 	<nav
 		class="flex h-auto min-h-[10vh] w-full flex-row items-center justify-between border-b border-b-gray-100 bg-white/70 p-5 bg-blend-lighten shadow-lg shadow-black/5 backdrop-blur-md dark:border-b-gray-900 dark:bg-black/70 dark:bg-blend-darken"
 	>
-		<ul>
-			<li>
-				<a href="/" onclick={handleClick}><strong>Shayan</strong> Delbari</a>
-			</li>
-		</ul>
+		<a href="/" onclick={handleClick}><strong>Shayan</strong> Delbari</a>
 		<div class="flex space-x-4">
-			<ToggleTheme />
-			<ul class="hidden items-center space-x-4 sm:flex">
+			<ul class="hidden items-center space-x-4 md:flex">
 				{#each menuItems as item}
 					<li>
 						<a
@@ -102,10 +101,27 @@
 					</li>
 				{/each}
 			</ul>
+		</div>
+		<div class="flex flex-row items-center space-x-4">
+			<ToggleTheme />
+			<div class="hidden flex-row items-center space-x-4 md:flex">
+				<a href="mailto:shayan.32.delbari@gmail.com"
+					><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
+				>
+				<a href="https://www.github.com/shayandelbari"
+					><Github class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
+				>
+				<a href="https://linkedin.com/in/shayandelbari"
+					><Linkedin class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
+				>
+				<a href={Resume} class="rounded bg-primary/70 px-2 py-1 text-white hover:bg-primary"
+					>Resume</a
+				>
+			</div>
 			<button
 				aria-label="Toggle Menu"
 				onclick={handleMobileMenu}
-				class="flex rounded border border-gray-100 bg-white p-1 dark:border-gray-900 dark:bg-black sm:hidden"
+				class="flex rounded border border-gray-100 bg-white p-1 dark:border-gray-900 dark:bg-black md:hidden"
 				><Bars_3 class=" stroke-black dark:stroke-white" /></button
 			>
 		</div>
@@ -124,16 +140,32 @@
 			onclick={(e) => {
 				e.stopPropagation();
 			}}
-			class="absolute right-0 flex h-screen w-fit border-l border-gray-100 bg-white dark:border-gray-900 dark:bg-black"
+			class="absolute right-0 flex h-screen w-fit flex-col border-l border-gray-100 bg-white dark:border-gray-900 dark:bg-black"
 		>
-			<ul class="flex flex-col space-y-2 py-4">
+			<ul class="mt-4 flex flex-col space-y-4 py-2">
 				{#each menuItems as item}
-					<li class="px-8 py-1">
+					<li class="px-8">
 						<a href={item.link} onclick={handleClick} class="hover:text-primary">
 							{item.name}
 						</a>
 					</li>
 				{/each}
+				<hr class="border-t border-gray-900/10 dark:border-gray-100/30" />
+				<div class="flex flex-row items-center space-x-4 px-8">
+					<a href="mailto:shayan.32.delbari@gmail.com"
+						><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
+					>
+					<a href="https://www.github.com/shayandelbari"
+						><Github class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
+					>
+					<a href="https://linkedin.com/in/shayandelbari"
+						><Linkedin class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
+					>
+				</div>
+				<hr class="border-t border-gray-900/10 dark:border-gray-100/30" />
+				<a href={Resume} class="mx-8 rounded bg-primary/70 px-2 py-1 text-white hover:bg-primary"
+					>Resume</a
+				>
 			</ul>
 		</div>
 	</div>
