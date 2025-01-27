@@ -32,7 +32,7 @@
 			<div
 				class="sticky top-0 flex min-h-[10vh] flex-row items-center justify-between border-b border-gray-100 bg-white p-4 dark:border-gray-900 dark:bg-black"
 			>
-				<h1>{project.name}</h1>
+				<h3>{project.name}</h3>
 				<button onclick={closePopup}><X class="stroke-black dark:stroke-white" /></button>
 			</div>
 			<div class="w-fit lg:flex lg:flex-row lg:items-center">
