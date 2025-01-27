@@ -1,7 +1,7 @@
 import testImage from '$lib/images/projects/testImg.jpg';
 import InvestSmart from '$lib/images/projects/InvestSmart.png';
 import InvestSmartThumbnail from '$lib/images/projects/InvestSmart-thumbnail.png';
-import InvestSmartDescription from '$lib/data/description/InvestSmart.html?raw';
+import InvestSmartDescription from '$lib/data/description/projects/InvestSmart.html?raw';
 
 export interface Project {
 	name: string;

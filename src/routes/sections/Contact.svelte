@@ -6,13 +6,10 @@
 </script>
 
 <div
-	class="w-full rounded border border-gray-100 bg-gray-100/50 p-6 dark:border-gray-900 dark:bg-gray-900/50"
+	class="w-full rounded-md border border-gray-100 bg-gray-100/50 p-6 dark:border-gray-900 dark:bg-gray-900/50"
 >
-	<h1 class="text-3xl font-black">Contact me</h1>
-	<div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
-		<p>
-			If you have any interesting idea for a project and want to collaborate feel free to email me
-		</p>
+	<div class="grid grid-cols-1 items-center gap-4 md:grid-cols-3">
+		<h1 class="h-fit text-3xl font-black">Contact me</h1>
 		<div>
 			<h3 class="font-mono">Download my resume</h3>
 			<a
