@@ -4,7 +4,7 @@
 	const length = experiences.length;
 </script>
 
-<h1 class="mt-5 text-2xl font-semibold">Professional Experience</h1>
+<h1 class="mb-5 text-2xl font-semibold">Professional Experience</h1>
 
 <div class="mx-auto flex w-fit flex-col">
 	{#each experiences as experience, index}

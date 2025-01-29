@@ -1,7 +1,7 @@
 import testImage from '$lib/images/projects/testImg.jpg';
-import InvestSmart from '$lib/images/projects/InvestSmart.png';
-import InvestSmartThumbnail from '$lib/images/projects/InvestSmart-thumbnail.png';
-import InvestSmartDescription from '$lib/data/description/projects/InvestSmart.html?raw';
+import NikeLanding from '$lib/images/projects/NikeLanding.png';
+import NikeLandingThumbnail from '$lib/images/projects/NikeLanding-thumbnail.png';
+import NikeLandingDescription from '$lib/data/description/projects/NikeLanding.html?raw';
 
 export interface Project {
 	name: string;
@@ -24,12 +24,12 @@ export interface Project {
 const projects: Project[] = [
 	{
 		isFirstPage: true,
-		name: 'InvestSmart Academy',
-		image: { src: InvestSmart, alt: 'Invest Smart academy mockup of the first page' },
-		thumbnail: { src: InvestSmartThumbnail, alt: 'Invest Smart academy thumbnail' },
-		description: InvestSmartDescription,
-		shortDescription: 'This is a small description',
-		skills: ['python', 'rust']
+		name: 'Landing Page - Nike',
+		image: { src: NikeLanding, alt: 'Nike Landing Page academy mockup of the first page' },
+		thumbnail: { src: NikeLandingThumbnail, alt: 'Nike Landing Page academy thumbnail' },
+		description: NikeLandingDescription,
+		shortDescription: 'A responsive landing page using React, Tailwind CSS, and JavaScript.',
+		skills: ['React', 'TailwindCSS', 'JavaScript']
 	},
 	{
 		isFirstPage: true,
