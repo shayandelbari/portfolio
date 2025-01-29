@@ -5,9 +5,16 @@
 body {
 	@apply bg-white dark:bg-black;
 	@apply text-black dark:text-white;
-	@apply scroll-smooth;
 	font-family: 'Inter', sans-serif;
 	font-optical-sizing: auto;
-	font-weight: <weight>;
 	font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-mono;
 }

@@ -12,15 +12,15 @@
 </script>
 
 <div
-	class="bg h-auto w-auto overflow-clip rounded-lg border border-black/50 bg-opacity-40 p-4 drop-shadow-md dark:border-white/50"
+	class="h-auto w-auto overflow-clip rounded-lg border border-gray-100 bg-opacity-40 p-4 drop-shadow-md dark:border-gray-900"
 >
 	<h3 class="text-center text-2xl font-bold">{project.name}</h3>
 	<img
-		src={project.image.src}
-		alt={project.image.alt}
-		class="mt-4 overflow-clip rounded-md border border-black/50 drop-shadow-md dark:border-white/50"
+		src={project.thumbnail.src}
+		alt={project.thumbnail.alt}
+		class="mt-4 overflow-clip rounded-md border border-gray-100 drop-shadow-md dark:border-gray-900"
 	/>
-	<p class="mt-2 text-gray-500">{@html project.shortDescription}</p>
+	<p class="mt-2 text-text-secondary">{@html project.shortDescription}</p>
 	<div class="mt-1 flex flex-row space-x-2">
 		{#each project.skills as skill}
 			<span

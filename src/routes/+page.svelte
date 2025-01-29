@@ -12,26 +12,32 @@
 	<meta name="description" content="This website is Shayan Delbari's portfolio" />
 </svelte:head>
 
-<section id="hero">
+<section id="hero" class="">
 	<Hero />
 </section>
 
-<section id="about" class="px-5">
+<section id="about">
 	<About />
 </section>
 
-<section id="experience" class="px-5">
+<section id="experience" class="mt-40">
 	<Experience />
 </section>
 
-<section id="skills" class="px-5">
+<section id="skills" class="mt-40">
 	<Skills />
 </section>
 
-<section id="projects" class="px-5">
+<section id="projects" class="mt-40">
 	<Projects />
 </section>
 
-<section id="contact" class="px-5">
+<section id="contact" class="mt-40">
 	<Contact />
 </section>
+
+<style>
+	section {
+		@apply px-40;
+	}
+</style>
