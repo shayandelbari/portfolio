@@ -13,7 +13,7 @@ export interface Experience {
 const experience: Experience[] = [
 	{
 		company: 'Aryan Duke Parsi',
-		position: 'Website Administrator & IT Manager',
+		position: 'Website Administrator and IT Specialist',
 		description: DescriptionWeb,
 		start: 'October 2022',
 		end: 'November 2023'

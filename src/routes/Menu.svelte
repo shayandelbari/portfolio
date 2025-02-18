@@ -57,6 +57,12 @@
 						...item,
 						isActive: item.link === `#${targetId}`
 					}));
+				} else if (!entry.isIntersecting) {
+					// Set inactive state for the matching menu item
+					menuItems = menuItems.map((item) => ({
+						...item,
+						isActive: false
+					}));
 				}
 			});
 		}, observerOptions);
@@ -83,11 +89,11 @@
 
 <div class="sticky top-0 z-10">
 	<nav
-		class="flex h-auto min-h-[10vh] w-full flex-row items-center justify-between border-b border-b-gray-100 bg-white/70 p-5 bg-blend-lighten shadow-lg shadow-black/5 backdrop-blur-md dark:border-b-gray-900 dark:bg-black/70 dark:bg-blend-darken"
+		class="grid h-auto min-h-[10vh] w-full grid-cols-3 items-center border-b border-b-gray-100 bg-white/70 p-5 shadow-lg shadow-black/5 backdrop-blur-md dark:border-b-gray-900 dark:bg-black/70"
 	>
 		<a href="/" onclick={handleClick}><strong>Shayan</strong> Delbari</a>
-		<div class="flex space-x-4">
-			<ul class="hidden items-center space-x-4 md:flex">
+		<div class="flex items-center justify-center space-x-4">
+			<ul class="hidden space-x-4 md:flex">
 				{#each menuItems as item}
 					<li>
 						<a
@@ -102,7 +108,7 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="flex flex-row items-center space-x-4">
+		<div class="flex flex-row items-center justify-end space-x-4">
 			<ToggleTheme />
 			<div class="hidden flex-row items-center space-x-4 md:flex">
 				<a href="mailto:shayan.32.delbari@gmail.com"
