@@ -7,7 +7,7 @@
 <div class="relative flex w-fit flex-row">
 	<div
 		class="absolute flex h-full w-1 bg-black dark:bg-white
-		{index == length - 1
+		{length == 1
 			? 'rounded-full'
 			: index == 0
 				? 'rounded-t-full'
