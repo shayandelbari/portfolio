@@ -1,8 +1,6 @@
 <script>
-	import Github from '$lib/icons/github.svelte';
-	import Linkedin from '$lib/icons/linkedin.svelte';
-	import Email from '$lib/icons/email.svelte';
-	import Resume from '$lib/data/Resume.pdf';
+	import { Resume } from '$lib/data';
+	import { Email, Github, Linkedin } from '$lib/icons';
 </script>
 
 <div

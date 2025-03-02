@@ -1,10 +1,5 @@
 <script lang="ts">
-	import About from './sections/About.svelte';
-	import Contact from './sections/Contact.svelte';
-	import Experience from './sections/Experience.svelte';
-	import Hero from './sections/Hero.svelte';
-	import Projects from './sections/Projects.svelte';
-	import Skills from './sections/Skills.svelte';
+	import { Hero, About, Experience, Skills, Projects, Contact } from './sections';
 </script>
 
 <svelte:head>

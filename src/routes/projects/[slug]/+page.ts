@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import projects from '$lib/data/projects';
+import { projects } from '$lib/data';
 
 export const load: PageLoad = ({ params }) => {
 	// Extract the slug from the URL
