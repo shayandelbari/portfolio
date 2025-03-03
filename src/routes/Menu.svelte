@@ -103,7 +103,7 @@
 		<div class="flex flex-row items-center justify-end space-x-4">
 			<ToggleTheme />
 			<div class="hidden flex-row items-center space-x-4 md:flex">
-				<a href="mailto:shayan.32.delbari@gmail.com"
+				<a href="mailto:shayandelbari0@gmail.com"
 					><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
 				>
 				<a href="https://www.github.com/shayandelbari"
@@ -150,7 +150,7 @@
 				{/each}
 				<hr class="border-t border-gray-900/10 dark:border-gray-100/30" />
 				<div class="flex flex-row items-center space-x-4 px-8">
-					<a href="mailto:shayan.32.delbari@gmail.com"
+					<a href="mailto:shayandelbari0@gmail.com"
 						><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
 					>
 					<a href="https://www.github.com/shayandelbari"

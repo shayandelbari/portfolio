@@ -19,7 +19,7 @@
 		<div>
 			<h3>My socials</h3>
 			<div class="mt-1 flex flex-row space-x-4">
-				<a href="mailto:shayan.32.delbari@gmail.com"
+				<a href="mailto:shayandelbari0@gmail.com"
 					><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
 				>
 				<a href="https://www.github.com/shayandelbari"
