@@ -1,23 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import ToggleTheme from '$lib/components/toggleTheme.svelte';
-	import Bars_3 from '$lib/icons/bars-3.svelte';
+	import { onMount, onDestroy } from 'svelte';
+	import { ToggleTheme } from '$lib/components';
 	import { fade, fly } from 'svelte/transition';
-	import Github from '$lib/icons/github.svelte';
-	import Resume from '$lib/data/Resume.pdf';
-	import Email from '$lib/icons/email.svelte';
-	import Linkedin from '$lib/icons/linkedin.svelte';
+	import { Resume } from '$lib/data';
+	import { Bars_3, Github, Email, Linkedin } from '$lib/icons';
 
-	let menuItems = $state([
-		{ name: 'About', link: '#about', isActive: false },
-		{ name: 'Experience', link: '#experience', isActive: false },
-		{ name: 'Skills', link: '#skills', isActive: false },
-		{ name: 'Projects', link: '#projects', isActive: false },
-		{ name: 'Contact', link: '#contact', isActive: false }
-	]);
+	const menuItems = [
+		{ name: 'About', link: '#about' },
+		{ name: 'Experience', link: '#experience' },
+		{ name: 'Skills', link: '#skills' },
+		{ name: 'Projects', link: '#projects' },
+		{ name: 'Contact', link: '#contact' }
+	];
 
 	const offset = 90; // Offset for scrolling (e.g., fixed header height)
 	let showMobileMenu = $state(false);
+	let activeItem = $state('');
 
 	function handleClick(event: MouseEvent): void {
 		event.preventDefault(); // Prevent default link behavior
@@ -33,11 +31,13 @@
 				top: scrollPosition,
 				behavior: 'smooth'
 			});
+			activeItem = `#${targetId}`;
 		} else {
 			window.scrollTo({
 				top: 0,
 				behavior: 'smooth'
 			});
+			activeItem = '';
 		}
 	}
 
@@ -52,17 +52,9 @@
 			entries.forEach((entry) => {
 				const targetId = entry.target.id;
 				if (entry.isIntersecting) {
-					// Set active state for the matching menu item
-					menuItems = menuItems.map((item) => ({
-						...item,
-						isActive: item.link === `#${targetId}`
-					}));
+					activeItem = `#${targetId}`;
 				} else if (!entry.isIntersecting) {
-					// Set inactive state for the matching menu item
-					menuItems = menuItems.map((item) => ({
-						...item,
-						isActive: false
-					}));
+					activeItem = '';
 				}
 			});
 		}, observerOptions);
@@ -100,7 +92,7 @@
 							href={item.link}
 							onclick={handleClick}
 							class="transition-colors duration-200 hover:text-primary
-									{item.isActive ? 'font-bold text-primary' : ''}"
+                {activeItem === item.link ? 'font-bold text-primary' : ''}"
 						>
 							{item.name}
 						</a>
@@ -111,7 +103,7 @@
 		<div class="flex flex-row items-center justify-end space-x-4">
 			<ToggleTheme />
 			<div class="hidden flex-row items-center space-x-4 md:flex">
-				<a href="mailto:shayan.32.delbari@gmail.com"
+				<a href="mailto:shayandelbari0@gmail.com"
 					><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
 				>
 				<a href="https://www.github.com/shayandelbari"
@@ -158,7 +150,7 @@
 				{/each}
 				<hr class="border-t border-gray-900/10 dark:border-gray-100/30" />
 				<div class="flex flex-row items-center space-x-4 px-8">
-					<a href="mailto:shayan.32.delbari@gmail.com"
+					<a href="mailto:shayandelbari0@gmail.com"
 						><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
 					>
 					<a href="https://www.github.com/shayandelbari"
