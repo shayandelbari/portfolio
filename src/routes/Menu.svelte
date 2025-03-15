@@ -112,14 +112,14 @@
 				<a href="https://linkedin.com/in/shayandelbari"
 					><Linkedin class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
 				>
-				<a href={Resume} class="rounded bg-primary/70 px-2 py-1 text-white hover:bg-primary"
+				<a href={Resume} class="rounded-sm bg-primary/70 px-2 py-1 text-white hover:bg-primary"
 					>Resume</a
 				>
 			</div>
 			<button
 				aria-label="Toggle Menu"
 				onclick={handleMobileMenu}
-				class="flex rounded border border-gray-100 bg-white p-1 dark:border-gray-900 dark:bg-black md:hidden"
+				class="flex rounded-sm border border-gray-100 bg-white p-1 dark:border-gray-900 dark:bg-black md:hidden"
 				><Bars_3 class=" stroke-black dark:stroke-white" /></button
 			>
 		</div>
@@ -161,7 +161,7 @@
 					>
 				</div>
 				<hr class="border-t border-gray-900/10 dark:border-gray-100/30" />
-				<a href={Resume} class="mx-8 rounded bg-primary/70 px-2 py-1 text-white hover:bg-primary"
+				<a href={Resume} class="mx-8 rounded-sm bg-primary/70 px-2 py-1 text-white hover:bg-primary"
 					>Resume</a
 				>
 			</ul>
