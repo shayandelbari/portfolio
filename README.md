@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio website! This project showcases my skills, experience, and projects. The website is built using modern web technologies including [Svelte](https://svelte.dev/), [Tailwind CSS](https://tailwindcss.com/), and [TypeScript](https://www.typescriptlang.org/).
 
+You can visit the live website at [shayandelbari.com](https://shayandelbari.com).
+
 ## Table of Contents
 
 - [Features](#features)
@@ -10,6 +12,7 @@ Welcome to my personal portfolio website! This project showcases my skills, expe
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
@@ -116,3 +119,7 @@ my-portfolio/
 ## Contributing
 
 Contributions are welcome! If you have any suggestions or improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
