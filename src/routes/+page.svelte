@@ -31,7 +31,9 @@
 	<Contact />
 </section>
 
-<style>
+<style lang="postcss">
+	@reference "tailwindcss";
+
 	section {
 		@apply px-5 md:px-20 lg:px-40;
 	}

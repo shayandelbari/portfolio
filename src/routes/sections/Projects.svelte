@@ -12,7 +12,7 @@
 	{/each}
 </div>
 <a href="https://www.github.com/shayandelbari">
-	<button class="mt-5 w-full rounded border border-primary bg-primary/60 p-2 hover:bg-primary"
+	<button class="mt-5 w-full rounded-sm border border-primary bg-primary/60 p-2 hover:bg-primary"
 		>For more projects visit my GitHub account
 	</button>
 </a>

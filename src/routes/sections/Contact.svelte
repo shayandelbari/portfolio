@@ -12,7 +12,7 @@
 			<h3 class="font-mono">Download my resume</h3>
 			<a
 				href={Resume}
-				class="mt-1 flex w-fit rounded bg-primary/70 px-2 py-1 text-white hover:bg-primary"
+				class="mt-1 flex w-fit rounded-sm bg-primary/70 px-2 py-1 text-white hover:bg-primary"
 				>Resume</a
 			>
 		</div>
