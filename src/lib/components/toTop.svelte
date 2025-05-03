@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Top from '$lib/icons/top.svelte';
+	import { Top } from '$lib/icons';
 
 	let { showAt }: { showAt: number } = $props();
 

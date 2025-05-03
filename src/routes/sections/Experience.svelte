@@ -1,6 +1,7 @@
 <script lang="ts">
-	import ExperienceCard from '$lib/components/experienceCard.svelte';
+	import { ExperienceCard } from '$lib/components';
 	import experiences from '$lib/data/experience';
+
 	const length = experiences.length;
 </script>
 

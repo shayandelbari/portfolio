@@ -1,9 +1,12 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { ToggleTheme } from '$lib/components';
 	import { fade, fly } from 'svelte/transition';
 	import { Resume } from '$lib/data';
-	import { Bars_3, Github, Email, Linkedin } from '$lib/icons';
+	import { Bars_3} from '$lib/icons';
+	import { Button } from '$lib/components/ui/button';
+	import {Socials} from '$lib/components';
+	import { Separator } from '$lib/components/ui/separator';
 
 	const menuItems = [
 		{ name: 'About', link: '#about' },
@@ -81,7 +84,7 @@
 
 <div class="sticky top-0 z-10">
 	<nav
-		class="grid h-auto min-h-[10vh] w-full grid-cols-3 items-center border-b border-b-gray-100 bg-white/70 p-5 shadow-lg shadow-black/5 backdrop-blur-md dark:border-b-gray-900 dark:bg-black/70"
+		class="grid h-auto min-h-[10vh] w-full grid-cols-3 items-center border-b border-border bg-background/70 p-5 shadow-lg shadow-black/5 backdrop-blur-md"
 	>
 		<a href="/" onclick={handleClick}><strong>Shayan</strong> Delbari</a>
 		<div class="flex items-center justify-center space-x-4">
@@ -103,24 +106,15 @@
 		<div class="flex flex-row items-center justify-end space-x-4">
 			<ToggleTheme />
 			<div class="hidden flex-row items-center space-x-4 md:flex">
-				<a href="mailto:shayandelbari0@gmail.com"
-					><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
-				>
-				<a href="https://www.github.com/shayandelbari"
-					><Github class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
-				>
-				<a href="https://linkedin.com/in/shayandelbari"
-					><Linkedin class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
-				>
-				<a href={Resume} class="rounded-sm bg-primary/70 px-2 py-1 text-white hover:bg-primary"
-					>Resume</a
-				>
+        <Socials />
+				<Button href={Resume} size="sm">Resume</Button>
 			</div>
-			<button
+			<Button
 				aria-label="Toggle Menu"
 				onclick={handleMobileMenu}
-				class="flex rounded-sm border border-gray-100 bg-white p-1 dark:border-gray-900 dark:bg-black md:hidden"
-				><Bars_3 class=" stroke-black dark:stroke-white" /></button
+        size="icon"
+        variant="outline"
+				><Bars_3 class="stroke-black dark:stroke-white" /></Button
 			>
 		</div>
 	</nav>
@@ -130,7 +124,7 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 	<div
 		transition:fade={{ duration: 100 }}
-		class="fixed top-0 z-30 h-screen w-screen bg-white/50 dark:bg-black/50"
+		class="fixed top-0 z-30 h-screen w-screen bg-background"
 		onclick={handleMobileMenu}
 	>
 		<div
@@ -138,7 +132,7 @@
 			onclick={(e) => {
 				e.stopPropagation();
 			}}
-			class="absolute right-0 flex h-screen w-fit flex-col border-l border-gray-100 bg-white dark:border-gray-900 dark:bg-black"
+			class="absolute right-0 flex h-screen w-fit flex-col border-l border-border bg-background"
 		>
 			<ul class="mt-4 flex flex-col space-y-4 py-2">
 				{#each menuItems as item}
@@ -148,22 +142,14 @@
 						</a>
 					</li>
 				{/each}
-				<hr class="border-t border-gray-900/10 dark:border-gray-100/30" />
+        <Separator />
 				<div class="flex flex-row items-center space-x-4 px-8">
-					<a href="mailto:shayandelbari0@gmail.com"
-						><Email class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
-					>
-					<a href="https://www.github.com/shayandelbari"
-						><Github class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
-					>
-					<a href="https://linkedin.com/in/shayandelbari"
-						><Linkedin class="fill-gray-900 opacity-50 hover:opacity-100 dark:fill-gray-100" /></a
-					>
+          <Socials />
 				</div>
-				<hr class="border-t border-gray-900/10 dark:border-gray-100/30" />
-				<a href={Resume} class="mx-8 rounded-sm bg-primary/70 px-2 py-1 text-white hover:bg-primary"
-					>Resume</a
-				>
+        <Separator />
+				<Button href={Resume} class="mx-8">
+          Resume
+        </Button>
 			</ul>
 		</div>
 	</div>

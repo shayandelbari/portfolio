@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Button } from '$lib/components/ui/button';
 	import type { Project } from '$lib/data/projects';
 	import ProjectPopup from './projectPopup.svelte';
 
@@ -12,15 +13,15 @@
 </script>
 
 <div
-	class="h-auto w-auto overflow-clip rounded-lg border border-gray-100 bg-opacity-40 p-4 drop-shadow-md dark:border-gray-900"
+	class="h-auto w-auto overflow-clip rounded-lg border border-border bg-opacity-40 p-4 drop-shadow-md"
 >
 	<h3 class="text-center text-2xl font-bold">{project.name}</h3>
 	<img
 		src={project.thumbnail.src}
 		alt={project.thumbnail.alt}
-		class="mt-4 overflow-clip rounded-md border border-gray-100 drop-shadow-md dark:border-gray-900"
+		class="mt-4 overflow-clip rounded-md border border-border drop-shadow-md"
 	/>
-	<p class="mt-2 text-text-secondary">{@html project.shortDescription}</p>
+	<p class="mt-2 text-secondary-foreground">{project.shortDescription}</p>
 	<div class="mt-1 flex flex-row space-x-2">
 		{#each project.skills as skill}
 			<span
@@ -29,13 +30,7 @@
 			>
 		{/each}
 	</div>
-	<button
-		onclick={openPopup}
-		aria-label="Show popup"
-		class="mt-4 w-full items-center rounded-md border border-primary bg-primary/60 p-2 drop-shadow-md hover:bg-primary"
-	>
-		Show more
-	</button>
+	<Button onclick={openPopup} class="mt-3 w-full" aria-label="Show popup">Show more</Button>
 </div>
 
 {#if show && popup}
