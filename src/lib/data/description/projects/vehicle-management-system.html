@@ -1,0 +1,84 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css">
+<h1>Vehicle Management System 🚗✈️🚢</h1>
+<h2>Overview</h2>
+<p>The <strong>Vehicle Management System</strong> is a C# console application designed to demonstrate Object-Oriented Programming (OOP) concepts, including inheritance, exception handling, file operations, sorting algorithms, and logical problem-solving.</p>
+<p>This project is structured to manage various types of vehicles, implement tax calculations, handle exceptions, and perform data analysis on vehicle attributes.</p>
+<h2>Features</h2>
+<p>✅ Object-Oriented Programming (OOP) with <strong>inheritance</strong> and <strong>polymorphism</strong><br>✅ <strong>Custom exception handling</strong> for invalid values (e.g., price, speed, cargo capacity)<br>✅ <strong>File operations</strong> for saving and loading vehicle data<br>✅ <strong>Sorting algorithms</strong> (custom sorting by price, speed, type)<br>✅ <strong>Data analysis using LINQ</strong> (finding fastest vehicles, average prices, and type counts)<br>✅ <strong>Object array implementation</strong> for managing multiple vehicle instances<br>✅ <strong>Command-line interface</strong> for adding, sorting, and displaying vehicles<br>✅ Bonus: Extendable for <strong>GUI implementation</strong> (if desired)</p>
+<h2>Project Structure</h2>
+<p>
+  📂 <strong>VehicleManagementSystem</strong><br>├── 📁 <strong>Vehicles</strong> <em>(All vehicle-related classes)</em><br>│ ├── Vehicle.cs <em>(Abstract base class)</em><br>│ ├── Train.cs, Airplane.cs, Car.cs, Boat.cs <em>(Derived vehicle types)</em><br>│ ├── CargoAirplane.cs, RaceCar.cs, LuxuryYacht.cs <em>(Specialized vehicles)</em><br>│
+  ├── 📁 <strong>IndependentClasses</strong> <em>(Utility classes)</em><br>│ ├── VehicleComparer.cs <em>(Implements sorting algorithms)</em><br>│ ├── TaxCalculator.cs <em>(Tax calculation logic based on vehicle type)</em><br>│ ├── VehicleStatistics.cs <em>(Data analysis functions using LINQ)</em><br>│
+  ├── 📁 <strong>Exceptions</strong> <em>(Custom exception handling)</em><br>│ ├── VehicleException.cs <em>(Base exception class)</em><br>│ ├── InvalidPriceException.cs, InvalidSpeedException.cs, InvalidCargoCapacityException.cs<br>│
+  ├── 📁 <strong>Services</strong> <em>(File handling &#x26; vehicle management)</em><br>│ ├── FileHandler.cs <em>(Handles saving/loading of vehicles from file)</em><br>│ ├── VehicleManager.cs <em>(Manages vehicle array operations)</em><br>│
+  ├── Program.cs <em>(Main execution logic &#x26; menu system)</em>
+</p>
+<h2>Installation &#x26; Setup</h2>
+<h3>Prerequisites</h3>
+<ul>
+  <li>.NET SDK (Latest version)</li>
+  <li>Visual Studio / VS Code / Any C# IDE</li>
+</ul>
+<h3>Steps to Set Up the Project</h3>
+<ol>
+  <li>
+    <p><strong>Clone the Repository</strong></p>
+    <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/shayandelbari/VehicleManagementSystem.git
+<span class="hljs-built_in">cd</span> VehicleManagementSystem
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Build the Project</strong></p>
+    <pre><code class="hljs language-bash">dotnet build
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Run the Application</strong></p>
+    <pre><code class="hljs language-bash">dotnet run
+</code></pre>
+  </li>
+</ol>
+<h2>Usage</h2>
+<h3>Adding a Vehicle</h3>
+<p>The program allows users to add a vehicle by providing details such as name, price, speed, and type. Custom exceptions are thrown if invalid values are entered.</p>
+<h3>Sorting Vehicles</h3>
+<ul>
+  <li><strong>By Price</strong> (Ascending or Descending)</li>
+  <li><strong>By Speed</strong> (Ascending or Descending)</li>
+  <li><strong>By Type</strong> (Alphabetical Order)</li>
+</ul>
+<h3>Data Analysis</h3>
+<ul>
+  <li>Find <strong>all vehicles faster than 200 km/h</strong></li>
+  <li>Find <strong>the most expensive vehicle</strong></li>
+  <li>Find <strong>trucks with Load Capacity > 5000 kg</strong></li>
+</ul>
+<h3>Exception Handling</h3>
+<p>The program properly handles exceptions such as:</p>
+<ul>
+  <li><strong>Negative price values</strong></li>
+  <li><strong>Speed values that are 0 or negative</strong></li>
+  <li><strong>Unrealistic cargo capacity values</strong></li>
+</ul>
+<h2>File Operations</h2>
+<ul>
+  <li><strong>Saving Data</strong>: The vehicle list is stored in a <code>vehicles.txt</code> file.</li>
+  <li><strong>Loading Data</strong>: The application loads previously saved vehicle data upon startup.</li>
+</ul>
+<h2>Future Enhancements</h2>
+<ul>
+  <li>[ ] Implement a <strong>Graphical User Interface (GUI)</strong></li>
+  <li>[ ] Add a <strong>search feature</strong> to find vehicles by name</li>
+  <li>[ ] Expand sorting options with more criteria</li>
+</ul>
+<h2>Contributing</h2>
+<p>Contributions are welcome! Please follow these steps:</p>
+<ol>
+  <li>Fork the repository</li>
+  <li>Create a new branch (<code>feature-branch</code>)</li>
+  <li>Commit your changes</li>
+  <li>Push to the branch</li>
+  <li>Submit a Pull Request</li>
+</ol>
+<h2>License</h2>
+<p>This project is licensed under the <strong>MIT License</strong>.</p>
