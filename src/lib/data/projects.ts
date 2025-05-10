@@ -17,7 +17,8 @@ export interface Project {
 }
 
 const projectDescriptions = import.meta.glob('/src/lib/data/description/projects/*.html', {
-	as: 'raw',
+	query: '?raw',
+	import: 'default',
 	eager: true
 });
 
@@ -27,7 +28,7 @@ Object.entries(projectDescriptions).forEach(([path, content]) => {
 	// Extract the slug from the path (filename without extension)
 	const slug = path.split('/').pop()?.replace('.html', '');
 	if (slug) {
-		descriptions[slug] = content;
+		descriptions[slug] = String(content);
 	}
 });
 
