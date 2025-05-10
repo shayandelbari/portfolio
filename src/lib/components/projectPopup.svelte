@@ -47,7 +47,7 @@
 					/>
 				</div>
 				<div class="items-center p-4">
-					<article class="prose prose-neutral dark:prose-invert max-w-prose">
+					<article class="prose prose-neutral max-w-prose dark:prose-invert">
 						{@html project.description}
 					</article>
 				</div>
