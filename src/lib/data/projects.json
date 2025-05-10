@@ -1,5 +1,15 @@
 [
   {
+    "name": "Lci Database Manager",
+    "shortDescription": "A simple and efficient interface for managing SQL databases. Easily run queries, edit tables, and view data in a clean, user-friendly environment. Designed for convenience, it streamlines essential database tasks without unnecessary complexity. (MongoDB count your days)",
+    "slug": "lci-database-manager",
+    "firstPage": true,
+    "url": "https://github.com/shayandelbari/lci-database-manager",
+    "website": "https://lci-database-manager.vercel.app",
+    "skills": [],
+    "commitSha": "319ba9a6f32215c8e94e8890989f1bdfa5228b1c"
+  },
+  {
     "name": "Vehicle Management System",
     "shortDescription": "The Vehicle Management System is a C# console application designed to demonstrate Object-Oriented Programming (OOP) concepts, including inheritance, exception handling, file operations, sorting algorithms, and logical problem-solving.",
     "slug": "vehicle-management-system",
@@ -21,19 +31,9 @@
     "name": "Factoid Project",
     "shortDescription": "This factoid answering program is designed to answer questions based on the text that both follow a certain template",
     "slug": "factoid-project",
-    "firstPage": false,
+    "firstPage": true,
     "url": "https://github.com/shayandelbari/factoid-project",
     "skills": [],
     "commitSha": "cd35102e8f8ce8444379dcc6a53c65cc943bd69f"
-  },
-  {
-    "name": "Lci Database Manager",
-    "shortDescription": "A simple and efficient interface for managing SQL databases. Easily run queries, edit tables, and view data in a clean, user-friendly environment. Designed for convenience, it streamlines essential database tasks without unnecessary complexity. (MongoDB count your days)",
-    "slug": "lci-database-manager",
-    "firstPage": false,
-    "url": "https://github.com/shayandelbari/lci-database-manager",
-    "website": "https://lci-database-manager.vercel.app",
-    "skills": [],
-    "commitSha": "319ba9a6f32215c8e94e8890989f1bdfa5228b1c"
   }
 ]

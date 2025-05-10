@@ -51,7 +51,7 @@ class Config {
 		this.imagesDir = join(dirname(fileURLToPath(import.meta.url)), '../src/lib/images/projects');
 
 		// First page projects
-		this.firstPage = ['vehicle-management-system'];
+		this.firstPage = ['vehicle-management-system', 'factoid-project', 'lci-database-manager'];
 	}
 }
 
@@ -75,8 +75,11 @@ type ProjectScript = Omit<Project, 'description'>;
 
 /**
  * turning markdown to html with syntax highlighting and formatting
+ * skips the first line of the markdown file
  */
 async function markdownToHtml(markdown: string) {
+	markdown = markdown.split('\n').slice(1).join('\n');
+
 	const html = await unified()
 		.use(remarkParse)
 		.use(remarkRehype)
@@ -238,9 +241,9 @@ function processProject(
 	}
 
 	// Check if README needs updating
-	const readmeChanged = 
-		forceUpdate || 
-		!existingProject.commitSha || 
+	const readmeChanged =
+		forceUpdate ||
+		!existingProject.commitSha ||
 		existingProject.commitSha !== githubProject.commitSha;
 
 	if (readmeChanged) {
@@ -274,7 +277,7 @@ async function syncProjects(forceUpdate = false) {
 		if (forceUpdate) {
 			logger.info('Force update mode: will update all projects regardless of commit SHA');
 		}
-		
+
 		// Step 1: Load existing data
 		logger.step(1, 'Loading existing projects from disk');
 		const existingProjects = await readLocalProjects();
@@ -291,7 +294,11 @@ async function syncProjects(forceUpdate = false) {
 		// Process each GitHub project
 		for (const githubProject of githubProjects) {
 			const existingProject = existingProjectMap.get(githubProject.slug);
-			const { project, needsReadmeUpdate } = processProject(githubProject, existingProject, forceUpdate);
+			const { project, needsReadmeUpdate } = processProject(
+				githubProject,
+				existingProject,
+				forceUpdate
+			);
 
 			updatedProjects.push(project);
 
