@@ -6,11 +6,17 @@
 
 <h1 class="mb-5 text-2xl font-semibold">Projects</h1>
 
-<div class="mt-3 grid w-fit grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+<div class="mt-3 grid w-fit grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
 	{#each projects as project}
-		{#if project.isFirstPage}<ProjectCard {project} />{/if}
+		{#if project.firstPage}
+			<ProjectCard {project} />
+		{/if}
 	{/each}
 </div>
-<Button href="https://www.github.com/shayandelbari" class="mt-5 w-full">
+<Button
+	href="https://github.com/shayandelbari?tab=repositories&q=topic:portfolio"
+	target="_blank"
+	class="mt-5 w-full"
+>
 	For more projects visit my GitHub account
 </Button>
