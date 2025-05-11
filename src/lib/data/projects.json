@@ -7,7 +7,8 @@
     "url": "https://github.com/shayandelbari/lci-database-manager",
     "website": "https://lci-database-manager.vercel.app",
     "skills": [],
-    "commitSha": "319ba9a6f32215c8e94e8890989f1bdfa5228b1c"
+    "commitSha": "319ba9a6f32215c8e94e8890989f1bdfa5228b1c",
+    "language": "Svelte"
   },
   {
     "name": "Vehicle Management System",
@@ -16,7 +17,8 @@
     "firstPage": true,
     "url": "https://github.com/shayandelbari/vehicle-management-system",
     "skills": [],
-    "commitSha": "4ca5d2f30ed5b81f1882966db1efafab9c6fe8c8"
+    "commitSha": "4ca5d2f30ed5b81f1882966db1efafab9c6fe8c8",
+    "language": "C#"
   },
   {
     "name": "Python Terminal Game",
@@ -25,7 +27,8 @@
     "firstPage": false,
     "url": "https://github.com/shayandelbari/python-terminal-game",
     "skills": [],
-    "commitSha": "b55a39c48aded7112c2377bfbb92980da9539a06"
+    "commitSha": "b55a39c48aded7112c2377bfbb92980da9539a06",
+    "language": "Python"
   },
   {
     "name": "Factoid Project",
@@ -34,6 +37,7 @@
     "firstPage": true,
     "url": "https://github.com/shayandelbari/factoid-project",
     "skills": [],
-    "commitSha": "cd35102e8f8ce8444379dcc6a53c65cc943bd69f"
+    "commitSha": "cd35102e8f8ce8444379dcc6a53c65cc943bd69f",
+    "language": "C#"
   }
 ]

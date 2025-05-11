@@ -4,7 +4,7 @@
 	import projects from '$lib/data/projects';
 </script>
 
-<h1 class="mb-5 text-2xl font-semibold">Projects</h1>
+<h1 class="mb-5 text-3xl font-semibold">Projects</h1>
 
 <div class="mt-3 grid w-fit grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
 	{#each projects as project}

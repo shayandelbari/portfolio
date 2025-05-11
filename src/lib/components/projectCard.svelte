@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Button } from '$lib/components/ui/button';
+	import { Badge } from '$lib/components/ui/badge';
 	import type { Project } from '$lib/data/projects';
 	import ProjectPopup from './projectPopup.svelte';
 	import * as Card from '$lib/components/ui/card';
@@ -14,8 +15,9 @@
 </script>
 
 <Card.Root class="flex h-full flex-col">
-	<Card.Header>
+	<Card.Header class="flex-row items-center justify-between gap-1">
 		<Card.Title>{project.name}</Card.Title>
+		<Badge variant="outline">{project.language}</Badge>
 	</Card.Header>
 	<Card.Content class="flex-grow">
 		{#if project.thumbnail}

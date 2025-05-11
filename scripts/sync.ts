@@ -144,6 +144,7 @@ async function readGithubProjects(): Promise<ProjectScript[]> {
 			firstPage: config.firstPage.includes(repo.name),
 			url: repo.html_url,
 			website: repo.homepage || undefined,
+			language: repo.language || 'Unknown',
 			skills: repo.topics?.filter((topic) => topic !== config.portfolioTopic) || [],
 			commitSha
 		});
