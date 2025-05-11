@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Moon from '$lib/icons/moon.svelte';
-	import Sun from '$lib/icons/sun.svelte';
+  import { Sun, Moon } from '$lib/icons';
+  import { Button } from '$lib/components/ui/button';
 
 	let dark: boolean = $state(true);
 
@@ -10,14 +10,15 @@
 	};
 </script>
 
-<button
+<Button
 	aria-label="Toggle theme"
 	onclick={toggleTheme}
-	class="rounded-sm border border-gray-100 bg-white p-1 hover:shadow-md dark:border-gray-900 dark:bg-black dark:shadow-white/10"
+  size="icon"
+  variant="outline"
 >
 	{#if dark}
 		<Sun class="stroke-white" />
 	{:else}
 		<Moon class="stroke-black" />
 	{/if}
-</button>
+</Button>

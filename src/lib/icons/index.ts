@@ -6,5 +6,6 @@ import Moon from './moon.svelte';
 import Sun from './sun.svelte';
 import Top from './top.svelte';
 import X from './x.svelte';
+import Website from './website.svelte';
 
-export { Bars_3, Email, Github, Linkedin, Moon, Sun, Top, X };
+export { Bars_3, Email, Github, Linkedin, Moon, Sun, Top, X, Website };

@@ -1,62 +1,43 @@
-import testImage from '$lib/images/projects/testImg.jpg';
-import NikeLanding from '$lib/images/projects/NikeLanding.png';
-import NikeLandingThumbnail from '$lib/images/projects/NikeLanding-thumbnail.png';
-import NikeLandingDescription from '$lib/data/description/projects/NikeLanding.html?raw';
+import projectsData from './projects.json';
 
 export interface Project {
 	name: string;
-	description: string;
-	image: {
-		src: string;
-		alt: string;
-	};
-	thumbnail: {
-		src: string;
-		alt: string;
-	};
-	isFirstPage?: boolean;
 	shortDescription: string;
-	// url: string;
-	// category: 'web development' | 'web design' | 'mobile design' | 'python' | 'rust'; // this is determining how to render the page
+	slug: string;
+	description: string;
+	thumbnail?: {
+		src: string;
+		alt: string;
+	};
+	firstPage: boolean;
+	url: string;
+	website?: string;
+	language: string;
 	skills: string[];
+	commitSha: string;
 }
 
-const projects: Project[] = [
-	{
-		isFirstPage: true,
-		name: 'Landing Page - Nike',
-		image: { src: NikeLanding, alt: 'Nike Landing Page academy mockup of the first page' },
-		thumbnail: { src: NikeLandingThumbnail, alt: 'Nike Landing Page academy thumbnail' },
-		description: NikeLandingDescription,
-		shortDescription: 'A responsive landing page using React, Tailwind CSS, and JavaScript.',
-		skills: ['React', 'TailwindCSS', 'JavaScript']
-	},
-	{
-		isFirstPage: true,
-		name: 'Project 2',
-		image: { src: testImage, alt: 'project alt' },
-		thumbnail: { src: testImage, alt: 'project alt' },
-		description: 'This is a project that I have worked on.',
-		shortDescription: 'This is a small description',
-		skills: ['python', 'rust']
-	},
-	{
-		isFirstPage: true,
-		name: 'Project 3',
-		image: { src: testImage, alt: 'project alt' },
-		thumbnail: { src: testImage, alt: 'project alt' },
-		description: 'This is a project that I have worked on.',
-		shortDescription: 'This is a small description',
-		skills: ['python', 'rust']
-	},
-	{
-		name: 'Project 4',
-		image: { src: testImage, alt: 'project alt' },
-		thumbnail: { src: testImage, alt: 'project alt' },
-		description: 'This is a project that I have worked on.',
-		shortDescription: 'This is a small description',
-		skills: ['python', 'rust']
+const projectDescriptions = import.meta.glob('/src/lib/data/description/projects/*.html', {
+	query: '?raw',
+	import: 'default',
+	eager: true
+});
+
+// Create a mapping of slugs to descriptions
+const descriptions: Record<string, string> = {};
+Object.entries(projectDescriptions).forEach(([path, content]) => {
+	// Extract the slug from the path (filename without extension)
+	const slug = path.split('/').pop()?.replace('.html', '');
+	if (slug) {
+		descriptions[slug] = String(content);
 	}
-];
+});
+
+// Combine project data with descriptions
+const projects: Project[] = projectsData.map((project) => ({
+	...project,
+	// Use the loaded description or fallback to empty string
+	description: descriptions[project.slug] || ''
+}));
 
 export default projects;

@@ -1,9 +1,21 @@
 <script lang="ts">
+	import { Button } from '$lib/components/ui/button';
+	import { Badge } from '$lib/components/ui/badge';
 	import type { Project } from '$lib/data/projects';
 	import ProjectPopup from './projectPopup.svelte';
+	import * as Card from '$lib/components/ui/card';
+	// file downloaded from https://github.com/anuraghazra/github-readme-stats/blob/master/src/common/languageColors.json
+	import languageColors from '$lib/data/languageColors.json';
+
+	function getLanguageColor(language: string): string {
+		return language in languageColors
+			? languageColors[language as keyof typeof languageColors]
+			: '#858585';
+	}
 
 	let { project, popup = true }: { project: Project; popup?: boolean } = $props();
 	let show: boolean = $state(false);
+	let color = getLanguageColor(project.language);
 
 	const openPopup = () => {
 		show = true;
@@ -11,32 +23,21 @@
 	};
 </script>
 
-<div
-	class="h-auto w-auto overflow-clip rounded-lg border border-gray-100 bg-opacity-40 p-4 drop-shadow-md dark:border-gray-900"
->
-	<h3 class="text-center text-2xl font-bold">{project.name}</h3>
-	<img
-		src={project.thumbnail.src}
-		alt={project.thumbnail.alt}
-		class="mt-4 overflow-clip rounded-md border border-gray-100 drop-shadow-md dark:border-gray-900"
-	/>
-	<p class="mt-2 text-text-secondary">{@html project.shortDescription}</p>
-	<div class="mt-1 flex flex-row space-x-2">
-		{#each project.skills as skill}
-			<span
-				class="select-none rounded-full border border-primary px-2 font-mono text-base text-primary"
-				>{skill}</span
-			>
-		{/each}
-	</div>
-	<button
-		onclick={openPopup}
-		aria-label="Show popup"
-		class="mt-4 w-full items-center rounded-md border border-primary bg-primary/60 p-2 drop-shadow-md hover:bg-primary"
-	>
-		Show more
-	</button>
-</div>
+<Card.Root class="flex h-full flex-col">
+	<Card.Header class="flex-row items-center justify-between gap-1">
+		<Card.Title>{project.name}</Card.Title>
+		<Badge style="background-color: {color}" variant="outline">{project.language}</Badge>
+	</Card.Header>
+	<Card.Content class="flex-grow">
+		{#if project.thumbnail}
+			<img src={project.thumbnail.src} alt={project.thumbnail.alt} class="mb-4 rounded-md" />
+		{/if}
+		<Card.Description class="line-clamp-3">{project.shortDescription}</Card.Description>
+	</Card.Content>
+	<Card.Footer class="mt-auto pt-4">
+		<Button onclick={openPopup} class="w-full" aria-label="Show popup">Show more</Button>
+	</Card.Footer>
+</Card.Root>
 
 {#if show && popup}
 	<ProjectPopup {project} bind:show />

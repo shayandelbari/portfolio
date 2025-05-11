@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <div class="flex min-h-[90vh]">
 	<div class="flex w-full flex-row items-center justify-between">
 		<div>
