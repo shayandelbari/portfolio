@@ -19,14 +19,22 @@ You can visit the live website at [shayandelbari.com](https://shayandelbari.com)
 - **Responsive Design**: The website is fully responsive and works on all devices.
 - **Dark Mode**: Toggle between light and dark themes.
 - **Smooth Scrolling**: Smooth scrolling for navigation links.
-- **Interactive Elements**: Pop-ups for project details and more.
+- **Interactive Project Cards**: Uniform-height project cards with dynamic language badges using GitHub's colors.
+- **Detailed Project Popups**: Interactive modal windows showing comprehensive project information in a split-panel layout.
+- **GitHub Integration**: Automatic project data synchronization from GitHub repositories.
+- **Syntax Highlighting**: Code snippets in project descriptions feature syntax highlighting.
+- **Component Library**: Uses shadcn-svelte components for consistent UI elements.
 - **Dynamic Content**: Content is dynamically loaded and displayed.
 
 ## Technologies Used
 
 - **Svelte**: A modern JavaScript framework for building user interfaces.
+- **SvelteKit**: The official Svelte application framework for building robust web applications.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **shadcn-svelte**: A collection of reusable, accessible UI components built with Tailwind CSS.
 - **TypeScript**: A strongly typed programming language that builds on JavaScript.
+- **GitHub API**: For fetching project data and README files automatically.
+- **Unified/Remark/Rehype**: For converting Markdown to HTML with syntax highlighting.
 - **Vite**: A fast build tool for modern web projects.
 - **PostCSS**: A tool for transforming CSS with JavaScript plugins.
 - **ESLint**: A tool for identifying and fixing problems in JavaScript code.
@@ -75,7 +83,7 @@ After running the development server, you can access the website at `http://loca
 - **About**: Information about me.
 - **Experience**: My professional experience.
 - **Skills**: A list of my skills categorized by type.
-- **Projects**: A showcase of my projects with pop-up details.
+- **Projects**: A showcase of my projects with pop-up details and GitHub integration.
 - **Contact**: Contact information and links to my social profiles.
 
 ## Project Structure
@@ -87,10 +95,18 @@ my-portfolio/
 ├── .svelte-kit/
 ├── node_modules/
 ├── public/
+├── scripts/
+│   └── sync.ts           # GitHub sync script for projects
 ├── src/
 │   ├── lib/
 │   │   ├── components/
+│   │   │   ├── projectCard.svelte
+│   │   │   ├── projectPopup.svelte
+│   │   │   └── ui/
 │   │   ├── data/
+│   │   │   ├── description/
+│   │   │   ├── languageColors.json
+│   │   │   └── projects.json
 │   │   ├── icons/
 │   │   └── styles/
 │   ├── routes/
