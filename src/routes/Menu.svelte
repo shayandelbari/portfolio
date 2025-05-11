@@ -3,9 +3,9 @@
 	import { ToggleTheme } from '$lib/components';
 	import { fade, fly } from 'svelte/transition';
 	import { Resume } from '$lib/data';
-	import { Bars_3} from '$lib/icons';
+	import { Bars_3 } from '$lib/icons';
 	import { Button } from '$lib/components/ui/button';
-	import {Socials} from '$lib/components';
+	import { Socials } from '$lib/components';
 	import { Separator } from '$lib/components/ui/separator';
 
 	const menuItems = [
@@ -88,14 +88,14 @@
 	>
 		<a href="/" onclick={handleClick}><strong>Shayan</strong> Delbari</a>
 		<div class="flex items-center justify-center space-x-4">
-			<ul class="hidden space-x-4 md:flex">
+			<ul class="hidden space-x-4 lg:flex">
 				{#each menuItems as item}
 					<li>
 						<a
 							href={item.link}
 							onclick={handleClick}
 							class="transition-colors duration-200 hover:text-primary
-                {activeItem === item.link ? 'font-bold text-primary' : ''}"
+                			{activeItem === item.link ? 'font-bold text-primary' : ''}"
 						>
 							{item.name}
 						</a>
@@ -105,17 +105,19 @@
 		</div>
 		<div class="flex flex-row items-center justify-end space-x-4">
 			<ToggleTheme />
-			<div class="hidden flex-row items-center space-x-4 md:flex">
-        <Socials />
+			<div class="hidden flex-row items-center space-x-4 lg:flex">
+				<Socials />
 				<Button href={Resume} size="sm">Resume</Button>
 			</div>
 			<Button
 				aria-label="Toggle Menu"
+				class="flex lg:hidden"
 				onclick={handleMobileMenu}
-        size="icon"
-        variant="outline"
-				><Bars_3 class="stroke-black dark:stroke-white" /></Button
+				size="icon"
+				variant="outline"
 			>
+				<Bars_3 class="stroke-black dark:stroke-white" />
+			</Button>
 		</div>
 	</nav>
 </div>
@@ -142,14 +144,12 @@
 						</a>
 					</li>
 				{/each}
-        <Separator />
+				<Separator />
 				<div class="flex flex-row items-center space-x-4 px-8">
-          <Socials />
+					<Socials />
 				</div>
-        <Separator />
-				<Button href={Resume} class="mx-8">
-          Resume
-        </Button>
+				<Separator />
+				<Button href={Resume} class="mx-8">Resume</Button>
 			</ul>
 		</div>
 	</div>

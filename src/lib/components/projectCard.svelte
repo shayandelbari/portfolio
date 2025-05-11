@@ -4,9 +4,18 @@
 	import type { Project } from '$lib/data/projects';
 	import ProjectPopup from './projectPopup.svelte';
 	import * as Card from '$lib/components/ui/card';
+	// file downloaded from https://github.com/anuraghazra/github-readme-stats/blob/master/src/common/languageColors.json
+	import languageColors from '$lib/data/languageColors.json';
+
+	function getLanguageColor(language: string): string {
+		return language in languageColors
+			? languageColors[language as keyof typeof languageColors]
+			: '#858585';
+	}
 
 	let { project, popup = true }: { project: Project; popup?: boolean } = $props();
 	let show: boolean = $state(false);
+	let color = getLanguageColor(project.language);
 
 	const openPopup = () => {
 		show = true;
@@ -17,7 +26,7 @@
 <Card.Root class="flex h-full flex-col">
 	<Card.Header class="flex-row items-center justify-between gap-1">
 		<Card.Title>{project.name}</Card.Title>
-		<Badge variant="outline">{project.language}</Badge>
+		<Badge style="background-color: {color}" variant="outline">{project.language}</Badge>
 	</Card.Header>
 	<Card.Content class="flex-grow">
 		{#if project.thumbnail}
