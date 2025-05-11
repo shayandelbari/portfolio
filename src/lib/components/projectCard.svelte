@@ -26,7 +26,9 @@
 <Card.Root class="flex h-full flex-col">
 	<Card.Header class="flex-row items-center justify-between gap-1">
 		<Card.Title>{project.name}</Card.Title>
-		<Badge style="background-color: {color}" variant="outline">{project.language}</Badge>
+		<Badge style="background-color: {color}70; border: 1px {color} solid;" variant="outline"
+			>{project.language}</Badge
+		>
 	</Card.Header>
 	<Card.Content class="flex-grow">
 		{#if project.thumbnail}
