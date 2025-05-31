@@ -20,7 +20,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 <div
 	transition:fade={{ duration: 300 }}
-	class="fixed left-0 top-0 z-20 flex h-screen w-screen items-center justify-center bg-background/70 backdrop-blur"
+	class="fixed left-0 top-0 z-20 flex h-screen w-screen items-center justify-center bg-background/70 backdrop-blur-sm"
 	onclick={closePopup}
 >
 	<div
