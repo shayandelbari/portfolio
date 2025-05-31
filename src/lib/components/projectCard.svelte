@@ -26,11 +26,11 @@
 <Card.Root class="flex h-full flex-col">
 	<Card.Header class="flex-row items-center justify-between gap-1">
 		<Card.Title>{project.name}</Card.Title>
-		<Badge style="background-color: {color}70; border: 1px {color} solid;" variant="outline"
+		<Badge style="background-color: {color}70; border: 1px solid {color}" variant="outline"
 			>{project.language}</Badge
 		>
 	</Card.Header>
-	<Card.Content class="flex-grow">
+	<Card.Content class="grow">
 		{#if project.thumbnail}
 			<img src={project.thumbnail.src} alt={project.thumbnail.alt} class="mb-4 rounded-md" />
 		{/if}
