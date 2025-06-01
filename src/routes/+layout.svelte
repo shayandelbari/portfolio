@@ -5,7 +5,6 @@
 
 	let { children } = $props();
 
-	// Vercel Web Analytics and Speed Insights
 	import { dev } from '$app/environment';
 	import { injectAnalytics } from '@vercel/analytics/sveltekit';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
