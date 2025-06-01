@@ -19,9 +19,9 @@
 <button
 	onclick={gotoTop}
 	aria-label="Scroll to top"
-	class="fixed bottom-5 right-5 h-fit w-fit rounded-full bg-black p-2 duration-300 dark:bg-white"
+	class="bg-foreground fixed right-5 bottom-5 h-fit w-fit rounded-full p-2 duration-300"
 	class:translate-x-0={showButton}
 	class:translate-x-16={!showButton}
 >
-	<Top class="stroke-white dark:stroke-black" />
+	<Top class="stroke-background" />
 </button>
