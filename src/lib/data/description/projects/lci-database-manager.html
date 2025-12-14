@@ -1,25 +1,255 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css">
-<p>Everything you need to build a Svelte project, powered by <a href="https://github.com/sveltejs/cli"><code>sv</code></a>.</p>
-<h2>Creating a project</h2>
-<p>If you're seeing this, you've probably already done this step. Congrats!</p>
-<pre><code class="hljs language-bash"><span class="hljs-comment"># create a new project in the current directory</span>
-npx sv create
-
-<span class="hljs-comment"># create a new project in my-app</span>
-npx sv create my-app
+<p>A modern, interactive web-based database management system built as a final project for the <strong>Databases 1</strong> course at <strong>Collège LaSalle Montréal</strong>. This application provides a comprehensive interface for managing SQL databases with support for creating tables, managing data, and visualizing database schemas.</p>
+<h2>Table of Contents</h2>
+<ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#technologies-used">Technologies Used</a></li>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#usage">Usage</a></li>
+  <li><a href="#project-structure">Project Structure</a></li>
+  <li><a href="#database-schema">Database Schema</a></li>
+  <li><a href="#our-team">Our Team</a></li>
+  <li><a href="#contributing">Contributing</a></li>
+  <li><a href="#license">License</a></li>
+</ul>
+<h2>Overview</h2>
+<p><strong>LCI Database Manager</strong> is a full-stack web application that demonstrates practical implementation of database concepts including normalization (3NF), schema design, SQL operations, and modern web development practices. The project combines theoretical database knowledge with hands-on implementation through an interactive user interface.</p>
+<p>This project was developed under the guidance of <strong>Professor Huu Con Nguyen</strong> and showcases our team's expertise in both database design and web development.</p>
+<h2>Features</h2>
+<p>✅ <strong>Interactive Database Management</strong></p>
+<ul>
+  <li>Create, edit, and delete database tables with a user-friendly interface</li>
+  <li>Add, update, and remove rows with validation</li>
+  <li>Support for primary keys, foreign keys, unique constraints, and check constraints</li>
+  <li>Real-time data filtering and searching</li>
+</ul>
+<p>✅ <strong>Advanced Table Operations</strong></p>
+<ul>
+  <li>Sortable columns with visual indicators</li>
+  <li>Pagination for large datasets</li>
+  <li>Column type enforcement and validation</li>
+  <li>Constraint visualization (PK, FK, UQ, CHK badges)</li>
+</ul>
+<p>✅ <strong>SQL Command Integration</strong></p>
+<ul>
+  <li>Comprehensive SQL command reference (50+ commands)</li>
+  <li>Support for DDL, DML, DQL operations</li>
+  <li>Transaction management</li>
+  <li>User and permission management</li>
+</ul>
+<p>✅ <strong>3NF Compliant Schema</strong></p>
+<ul>
+  <li>Properly normalized database structure</li>
+  <li>Seven-table relational schema (Customers, Categories, Suppliers, Products, Orders, Order_Details, System_Users)</li>
+  <li>Entity-relationship diagram visualization</li>
+</ul>
+<p>✅ <strong>Modern UI/UX</strong></p>
+<ul>
+  <li>Responsive design for all devices</li>
+  <li>Dark theme enforced for better visual experience</li>
+  <li>Interactive dialogs and modals</li>
+  <li>Toast notifications for user feedback</li>
+  <li>Smooth animations and transitions</li>
+</ul>
+<p>✅ <strong>Database Reporting</strong></p>
+<ul>
+  <li>Schema analysis and visualization</li>
+  <li>SQL feature implementation showcase</li>
+  <li>Mermaid diagram integration for ER diagrams</li>
+</ul>
+<h2>Technologies Used</h2>
+<h3>Frontend</h3>
+<ul>
+  <li><strong><a href="https://svelte.dev/">Svelte 5</a></strong> - Modern reactive JavaScript framework</li>
+  <li><strong><a href="https://kit.svelte.dev/">SvelteKit</a></strong> - Full-stack Svelte framework</li>
+  <li><strong><a href="https://www.typescriptlang.org/">TypeScript</a></strong> - Type-safe JavaScript</li>
+  <li><strong><a href="https://tailwindcss.com/">Tailwind CSS</a></strong> - Utility-first CSS framework</li>
+  <li><strong><a href="https://www.shadcn-svelte.com/">shadcn-svelte</a></strong> - Reusable UI component library</li>
+  <li><strong><a href="https://www.bits-ui.com/">Bits UI</a></strong> - Headless UI components</li>
+</ul>
+<h3>Backend</h3>
+<ul>
+  <li><strong><a href="https://nodejs.org/">Node.js</a></strong> - JavaScript runtime</li>
+  <li><strong><a href="https://neon.tech/">Neon Database</a></strong> - Serverless PostgreSQL</li>
+  <li><strong><a href="https://www.npmjs.com/package/@neondatabase/serverless">@neondatabase/serverless</a></strong> - PostgreSQL client for serverless environments</li>
+  <li><strong><a href="https://axios-http.com/">Axios</a></strong> - HTTP client for API requests</li>
+</ul>
+<h3>Development Tools</h3>
+<ul>
+  <li><strong><a href="https://vitejs.dev/">Vite</a></strong> - Fast build tool and development server</li>
+  <li><strong><a href="https://eslint.org/">ESLint</a></strong> - JavaScript linter</li>
+  <li><strong><a href="https://prettier.io/">Prettier</a></strong> - Code formatter</li>
+  <li><strong><a href="https://typescript-eslint.io/">TypeScript ESLint</a></strong> - TypeScript-specific linting rules</li>
+</ul>
+<h3>Additional Libraries</h3>
+<ul>
+  <li><strong><a href="https://marked.js.org/">Marked</a></strong> - Markdown parser</li>
+  <li><strong><a href="https://mermaid.js.org/">Mermaid</a></strong> - Diagram and chart generation</li>
+  <li><strong><a href="https://highlightjs.org/">Highlight.js</a></strong> - Syntax highlighting</li>
+  <li><strong><a href="https://svelte-sonner.vercel.app/">Svelte Sonner</a></strong> - Toast notifications</li>
+  <li><strong><a href="https://lucide.dev/">Lucide Icons</a></strong> - Beautiful icon set</li>
+  <li><strong><a href="https://github.com/huntabyte/mode-watcher">Mode Watcher</a></strong> - Theme management</li>
+</ul>
+<h2>Installation</h2>
+<h3>Prerequisites</h3>
+<ul>
+  <li><strong>Node.js</strong> (v18 or higher)</li>
+  <li><strong>npm</strong> or <strong>pnpm</strong> or <strong>yarn</strong></li>
+  <li>A <strong>Neon Database</strong> account (or any PostgreSQL database)</li>
+</ul>
+<h3>Steps</h3>
+<ol>
+  <li>
+    <p><strong>Clone the repository:</strong></p>
+    <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/shayandelbari/lci-database-manager.git
+<span class="hljs-built_in">cd</span> lci-database-manager
 </code></pre>
-<h2>Developing</h2>
-<p>Once you've created a project and installed dependencies with <code>npm install</code> (or <code>pnpm install</code> or <code>yarn</code>), start a development server:</p>
-<pre><code class="hljs language-bash">npm run dev
-
+  </li>
+  <li>
+    <p><strong>Install dependencies:</strong></p>
+    <pre><code class="hljs language-bash">npm install
+<span class="hljs-comment"># or</span>
+pnpm install
+<span class="hljs-comment"># or</span>
+yarn install
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Set up environment variables:</strong></p>
+    <p>Create a <code>.env</code> file in the root directory with your database connection string:</p>
+    <pre><code class="hljs language-env">DATABASE_URL=your_neon_database_connection_string
+</code></pre>
+  </li>
+  <li>
+    <p><strong>Run database migrations (optional):</strong></p>
+    <p>If you have SQL scripts in the <code>docs/</code> directory, you can run them against your database to set up the initial schema.</p>
+  </li>
+  <li>
+    <p><strong>Start the development server:</strong></p>
+    <pre><code class="hljs language-bash">npm run dev
 <span class="hljs-comment"># or start the server and open the app in a new browser tab</span>
 npm run dev -- --open
 </code></pre>
-<h2>Building</h2>
-<p>To create a production version of your app:</p>
+  </li>
+  <li>
+    <p><strong>Access the application:</strong></p>
+    <p>Navigate to <code>http://localhost:5173</code> in your browser.</p>
+  </li>
+</ol>
+<h2>Usage</h2>
+<h3>Database Manager</h3>
+<ol>
+  <li>Navigate to <code>/database-manager</code> to access the main database management interface</li>
+  <li>Select a table from the dropdown to view and manage its data</li>
+  <li>Use the <strong>Create Table</strong> button to add new tables with custom columns and constraints</li>
+  <li><strong>Add Row</strong> to insert new data into the selected table</li>
+  <li><strong>Edit</strong> or <strong>Delete</strong> rows using the action buttons in each row</li>
+  <li>Apply <strong>filters</strong> to search and filter data based on column values</li>
+  <li>Use <strong>sorting</strong> by clicking on column headers</li>
+</ol>
+<h3>SQL Command Reference</h3>
+<p>Visit the application to view a comprehensive guide of 50+ SQL commands organized by category:</p>
+<ul>
+  <li>Data Retrieval (SELECT, GROUP BY, HAVING, etc.)</li>
+  <li>Data Manipulation (INSERT, UPDATE, DELETE)</li>
+  <li>Data Definition (CREATE TABLE, ALTER TABLE, DROP TABLE)</li>
+  <li>Constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, NOT NULL)</li>
+  <li>Transactions (COMMIT, ROLLBACK, SAVEPOINT)</li>
+  <li>User Management (CREATE USER, GRANT, DROP USER)</li>
+  <li>And much more!</li>
+</ul>
+<h3>Building for Production</h3>
+<p>To create a production build:</p>
 <pre><code class="hljs language-bash">npm run build
 </code></pre>
-<p>You can preview the production build with <code>npm run preview</code>.</p>
+<p>Preview the production build:</p>
+<pre><code class="hljs language-bash">npm run preview
+</code></pre>
+<p>To start the production server:</p>
+<pre><code class="hljs language-bash">npm start
+</code></pre>
 <blockquote>
-  <p>To deploy your app, you may need to install an <a href="https://svelte.dev/docs/kit/adapters">adapter</a> for your target environment.</p>
+  <p><strong>Note:</strong> You may need to install an <a href="https://svelte.dev/docs/kit/adapters">adapter</a> for your target deployment environment. This project includes both <code>@sveltejs/adapter-node</code> and <code>@sveltejs/adapter-vercel</code>.</p>
 </blockquote>
+<h2>Project Structure</h2>
+<pre><code class="hljs language-plaintext">lci-database-manager/
+├── docs/                          # SQL scripts and documentation
+│   ├── 1.sql through 8.sql       # Database implementation scripts
+├── src/
+│   ├── lib/
+│   │   ├── components/           # Reusable Svelte components
+│   │   │   ├── db-command/       # SQL command documentation
+│   │   │   ├── filter-dialog/    # Data filtering interface
+│   │   │   ├── home/             # Home page component
+│   │   │   ├── report/           # Database analysis report
+│   │   │   ├── row-dialog/       # Row add/edit dialog
+│   │   │   ├── table-dialog/     # Table creation dialog
+│   │   │   └── ui/               # shadcn-svelte UI components
+│   │   ├── server/               # Server-side code
+│   │   │   └── db/               # Database connection and queries
+│   │   ├── stores/               # Svelte stores for state management
+│   │   │   ├── database.ts       # Database state
+│   │   │   ├── databaseStore.ts  # Database operations
+│   │   │   └── tableStore.ts     # Table operations and data
+│   │   ├── types/                # TypeScript type definitions
+│   │   └── utils/                # Utility functions
+│   ├── routes/                   # SvelteKit routes
+│   │   ├── api/                  # API endpoints
+│   │   ├── database-manager/     # Database manager page
+│   │   ├── report/               # Report page
+│   │   ├── +layout.svelte        # Root layout
+│   │   └── +page.svelte          # Home page
+│   ├── app.css                   # Global styles
+│   └── app.html                  # HTML template
+├── static/                       # Static assets
+├── .prettierrc                   # Prettier configuration
+├── eslint.config.js              # ESLint configuration
+├── package.json                  # Dependencies and scripts
+├── svelte.config.js              # Svelte configuration
+├── tailwind.config.ts            # Tailwind CSS configuration
+├── tsconfig.json                 # TypeScript configuration
+├── vite.config.ts                # Vite configuration
+├── sql-command-summary.md        # SQL commands reference
+└── README.md                     # This file
+</code></pre>
+<h2>Database Schema</h2>
+<p>The database implements a <strong>Third Normal Form (3NF)</strong> compliant schema with the following tables:</p>
+<ul>
+  <li><strong>Customers</strong> - Customer personal information</li>
+  <li><strong>Categories</strong> - Product categorization</li>
+  <li><strong>Suppliers</strong> - Supplier information</li>
+  <li><strong>Products</strong> - Inventory management with relationships</li>
+  <li><strong>Orders</strong> - Order headers with customer references</li>
+  <li><strong>Order_Details</strong> - Many-to-many relationship between orders and products</li>
+  <li><strong>System_Users</strong> - System access and permissions</li>
+</ul>
+<p>For detailed schema analysis and implementation, visit the <code>/report</code> page in the application.</p>
+<h2>Our Team</h2>
+<p>This project was collaboratively developed by a dedicated team of students from <strong>Collège LaSalle Montréal</strong>:</p>
+<ul>
+  <li><strong><a href="https://github.com/abdulrahman">Abdulrahman Mousa</a></strong> – Website Frontend, database integration specialist</li>
+  <li><strong><a href="https://github.com/shayandelbari">Shayan Delbari</a></strong> – Website Backend, server-side database interactions</li>
+  <li><strong>Sofia Saldumbide Rissotto</strong> – Database design and implementation specialist</li>
+  <li><strong>Akshay Kheterpal</strong> – Database normalization and optimization specialist</li>
+</ul>
+<p><strong>Course Instructor:</strong> Professor Huu Con Nguyen</p>
+<h2>Contributing</h2>
+<p>Contributions are welcome! If you'd like to contribute to this project, please follow these steps:</p>
+<ol>
+  <li>Fork the repository</li>
+  <li>Create a new branch (<code>git checkout -b feature-branch</code>)</li>
+  <li>Make your changes</li>
+  <li>Run linting and formatting:
+    <pre><code class="hljs language-bash">npm run lint
+npm run format
+</code></pre>
+  </li>
+  <li>Commit your changes (<code>git commit -m 'Add some feature'</code>)</li>
+  <li>Push to the branch (<code>git push origin feature-branch</code>)</li>
+  <li>Open a Pull Request</li>
+</ol>
+<h2>License</h2>
+<p>This project is licensed under the <strong>MIT License</strong>. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+<hr>
+<p><strong>Built with ❤️ by the LCI Database Management Team</strong></p>

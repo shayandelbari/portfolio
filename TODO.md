@@ -12,11 +12,11 @@
 - [x] add pop-up for when user click the projects.
 - [x] implement smooth the scrolling for the anchor links.
 - [x] add a change theme button.
-    > the theme is now set to dark as default, maybe I can set it to user's preference.
+  > the theme is now set to dark as default, maybe I can set it to user's preference.
 - [x] add the functionality to highlight the active section.
 - [x] add animation for the toTop component.
 - [x] use transitions for displaying popups.
-- [ ] add smooth scrolling for `Shayan Delbari` that links to top of the page.
+- [x] add smooth scrolling for `Shayan Delbari` that links to top of the page.
 
 ## Problems
 
