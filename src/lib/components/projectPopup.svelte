@@ -20,16 +20,16 @@
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 <div
 	transition:fade={{ duration: 300 }}
-	class="fixed left-0 top-0 z-20 flex h-screen w-screen items-center justify-center bg-background/70 backdrop-blur-sm"
+	class="bg-background/70 fixed top-0 left-0 z-20 flex h-screen w-screen items-center justify-center backdrop-blur-sm"
 	onclick={closePopup}
 >
 	<div
 		transition:scale={{ duration: 300 }}
 		onclick={(e) => e.stopPropagation()}
-		class="flex h-full w-full max-w-6xl flex-col overflow-clip rounded-lg border border-border bg-background shadow-xl sm:h-4/5 sm:w-[90%]"
+		class="border-border bg-background flex h-full w-full max-w-6xl flex-col overflow-clip rounded-lg border shadow-xl sm:h-4/5 sm:w-[90%]"
 	>
 		<div
-			class="sticky top-0 z-10 flex h-[10%] flex-row items-center justify-between border-b border-border bg-background p-6"
+			class="border-border bg-background sticky top-0 z-10 flex h-[10%] flex-row items-center justify-between border-b p-6"
 		>
 			<h3 class="text-2xl font-bold">{project.name}</h3>
 			<Button size="icon" variant="outline" onclick={closePopup}>
@@ -41,7 +41,7 @@
 			<div class="w-full p-6 lg:w-1/3">
 				<!-- Left side panel - fixed 1/3 width -->
 				<div class="space-y-6">
-					<p class="prose prose-neutral max-w-none dark:prose-invert">
+					<p class="prose prose-neutral dark:prose-invert max-w-none">
 						{project.shortDescription}
 					</p>
 					<div class="flex gap-4 pt-2">
@@ -58,7 +58,7 @@
 			</div>
 			<div class="w-full overflow-y-auto p-6 lg:w-2/3">
 				<!-- Right side panel - 2/3 width with overflow -->
-				<article class="prose prose-neutral max-w-none dark:prose-invert">
+				<article class="prose prose-neutral dark:prose-invert max-w-none">
 					{@html project.description}
 				</article>
 			</div>

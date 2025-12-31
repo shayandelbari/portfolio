@@ -4,7 +4,7 @@
 	import { Resume } from '$lib/data';
 </script>
 
-<div class="w-full rounded-md border border-border bg-secondary/50 p-6">
+<div class="border-border bg-secondary/50 w-full rounded-md border p-6">
 	<div class="grid grid-cols-1 items-center gap-4 md:grid-cols-3">
 		<h1 class="text-3xl font-semibold">Contact me</h1>
 		<div>

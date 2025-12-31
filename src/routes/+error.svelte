@@ -4,7 +4,7 @@
 </script>
 
 <div class="flex h-[90vh] w-screen flex-col items-center justify-center">
-	<h1 class="m-3 text-8xl font-thin text-secondary-foreground">{page.status}</h1>
+	<h1 class="text-secondary-foreground m-3 text-8xl font-thin">{page.status}</h1>
 	<p>{page.error?.message}</p>
-	<Button href="/" class="fixed bottom-4 text-primary">Go to Home Page</Button>
+	<Button href="/" class="text-primary fixed bottom-4">Go to Home Page</Button>
 </div>

@@ -1,51 +1,96 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css">
-<p>A multi-tier desktop application for managing clinic operations, developed for the Multi-tier Application Development course at College LaSalle.</p>
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css"
+/>
 <p>
-  <img src="ClinicManagement_proj/Static/HealthCareClinicPreview.gif" alt="Clinic Management Preview">
+	A multi-tier desktop application for managing clinic operations, developed for the Multi-tier
+	Application Development course at College LaSalle.
 </p>
-<p>A multi-tier desktop application for managing clinic operations, developed for the Multi-tier Application Development course at College LaSalle.</p>
+<p>
+	<img
+		src="ClinicManagement_proj/Static/HealthCareClinicPreview.gif"
+		alt="Clinic Management Preview"
+	/>
+</p>
+<p>
+	A multi-tier desktop application for managing clinic operations, developed for the Multi-tier
+	Application Development course at College LaSalle.
+</p>
 <h2>Features</h2>
 <ul>
-  <li><strong>User Authentication</strong>: Role-based login for doctors, receptionists, and administrators.</li>
-  <li><strong>Appointment Management</strong>: Book, cancel, and view appointments with scheduling support.</li>
-  <li><strong>Patient Records</strong>: Comprehensive patient data management and clinical summaries.</li>
-  <li><strong>Doctor Scheduling</strong>: Manage doctor availability, workloads, and schedules.</li>
-  <li><strong>Reports and Analytics</strong>: Generate reports on appointments, patient records, and doctor statistics.</li>
-  <li><strong>Notifications</strong>: In-app notifications for updates and alerts.</li>
+	<li>
+		<strong>User Authentication</strong>: Role-based login for doctors, receptionists, and
+		administrators.
+	</li>
+	<li>
+		<strong>Appointment Management</strong>: Book, cancel, and view appointments with scheduling
+		support.
+	</li>
+	<li>
+		<strong>Patient Records</strong>: Comprehensive patient data management and clinical summaries.
+	</li>
+	<li><strong>Doctor Scheduling</strong>: Manage doctor availability, workloads, and schedules.</li>
+	<li>
+		<strong>Reports and Analytics</strong>: Generate reports on appointments, patient records, and
+		doctor statistics.
+	</li>
+	<li><strong>Notifications</strong>: In-app notifications for updates and alerts.</li>
 </ul>
 <h2>Technologies</h2>
 <ul>
-  <li><strong>Frontend</strong>: Windows Forms (C#) with role-specific dashboards.</li>
-  <li><strong>Backend</strong>: C# Business Logic Layer (BLL) with services for appointments, patients, doctors, and users.</li>
-  <li><strong>Data Access</strong>: Entity Framework with SQL Server database, including stored procedures and views.</li>
-  <li><strong>Database</strong>: SQL Server with Entity Framework models and migrations.</li>
+	<li><strong>Frontend</strong>: Windows Forms (C#) with role-specific dashboards.</li>
+	<li>
+		<strong>Backend</strong>: C# Business Logic Layer (BLL) with services for appointments,
+		patients, doctors, and users.
+	</li>
+	<li>
+		<strong>Data Access</strong>: Entity Framework with SQL Server database, including stored
+		procedures and views.
+	</li>
+	<li><strong>Database</strong>: SQL Server with Entity Framework models and migrations.</li>
 </ul>
 <h2>Architecture</h2>
 <p>The application follows a multi-tier architecture:</p>
 <ul>
-  <li><strong>Presentation Layer (UI)</strong>: Windows Forms for user interaction, including dashboards and controllers for panel management.</li>
-  <li><strong>Business Logic Layer (BLL)</strong>: Services and utilities handling application logic, data validation, and notifications.</li>
-  <li><strong>Data Access Layer (DAL)</strong>: Entity Framework context for database operations, with models, stored procedures, and views.</li>
+	<li>
+		<strong>Presentation Layer (UI)</strong>: Windows Forms for user interaction, including
+		dashboards and controllers for panel management.
+	</li>
+	<li>
+		<strong>Business Logic Layer (BLL)</strong>: Services and utilities handling application logic,
+		data validation, and notifications.
+	</li>
+	<li>
+		<strong>Data Access Layer (DAL)</strong>: Entity Framework context for database operations, with
+		models, stored procedures, and views.
+	</li>
 </ul>
 <h2>Installation</h2>
 <h3>Prerequisites</h3>
 <ul>
-  <li>.NET Framework 4.8 or later</li>
+	<li>.NET Framework 4.8 or later</li>
 </ul>
 <h3>From Release (Recommended for End Users)</h3>
-<p>Download the latest release from <a href="https://github.com/shayandelbari/clinic-management/releases/latest">here</a>. Run the installer; the setup will handle the rest, including database configuration.</p>
+<p>
+	Download the latest release from
+	<a href="https://github.com/shayandelbari/clinic-management/releases/latest">here</a>. Run the
+	installer; the setup will handle the rest, including database configuration.
+</p>
 <p>To uninstall, simply go to Settings > Apps and uninstall the application.</p>
 <h3>From Source (For Developers)</h3>
 <ol>
-  <li>Clone the repository and open <code>ClinicManagement_sol.sln</code> in Visual Studio.</li>
-  <li>Restore NuGet packages (Entity Framework 6.5.1).</li>
-  <li>Run the database script in <code>DAL/HealthCareClinicDB_T2_Script.sql</code> to set up the database.</li>
-  <li>Build and run the application.</li>
+	<li>Clone the repository and open <code>ClinicManagement_sol.sln</code> in Visual Studio.</li>
+	<li>Restore NuGet packages (Entity Framework 6.5.1).</li>
+	<li>
+		Run the database script in <code>DAL/HealthCareClinicDB_T2_Script.sql</code> to set up the
+		database.
+	</li>
+	<li>Build and run the application.</li>
 </ol>
 <h2>Usage</h2>
 <ul>
-  <li>Launch the application and log in with appropriate credentials.</li>
-  <li>Navigate through dashboards based on user role.</li>
-  <li>Manage appointments, patients, and schedules as needed.</li>
-  <li>View reports and notifications for operational insights.</li>
+	<li>Launch the application and log in with appropriate credentials.</li>
+	<li>Navigate through dashboards based on user role.</li>
+	<li>Manage appointments, patients, and schedules as needed.</li>
+	<li>View reports and notifications for operational insights.</li>
 </ul>

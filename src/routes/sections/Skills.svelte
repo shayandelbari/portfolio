@@ -6,7 +6,7 @@
 
 <div class="flex flex-wrap gap-4">
 	{#each skills as skill}
-		<span class="h-auto w-auto select-none rounded-md border border-foreground px-2 py-1 font-mono"
+		<span class="border-foreground h-auto w-auto rounded-md border px-2 py-1 font-mono select-none"
 			>{skill.name}</span
 		>
 	{/each}

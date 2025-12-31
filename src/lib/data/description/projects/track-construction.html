@@ -1,52 +1,80 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css">
-<p>A web app for managing construction projects, specs, team roles, comments, and file previews. Built with Next.js 15, React 19, and MongoDB.</p>
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/github-dark.min.css"
+/>
+<p>
+	A web app for managing construction projects, specs, team roles, comments, and file previews.
+	Built with Next.js 15, React 19, and MongoDB.
+</p>
 <h2>Features</h2>
 <ul>
-  <li><strong>Project Management</strong>: Create, edit, and share projects with role-based access (Owner, Editor, Viewer).</li>
-  <li><strong>Specifications</strong>: Track specs with tags, due dates, locations, insights, and real-time updates.</li>
-  <li><strong>Collaboration</strong>: Comment on specs, upload files (images, PDFs, docs), and preview inline/modal.</li>
-  <li><strong>User Management</strong>: Clerk authentication with customizable roles and permissions.</li>
-  <li><strong>UI/UX</strong>: Responsive design, dark mode, modals, toasts, and fullscreen support.</li>
-  <li><strong>AI Integration</strong>: Optional project/spec generation via Gemini API.</li>
+	<li>
+		<strong>Project Management</strong>: Create, edit, and share projects with role-based access
+		(Owner, Editor, Viewer).
+	</li>
+	<li>
+		<strong>Specifications</strong>: Track specs with tags, due dates, locations, insights, and
+		real-time updates.
+	</li>
+	<li>
+		<strong>Collaboration</strong>: Comment on specs, upload files (images, PDFs, docs), and preview
+		inline/modal.
+	</li>
+	<li>
+		<strong>User Management</strong>: Clerk authentication with customizable roles and permissions.
+	</li>
+	<li>
+		<strong>UI/UX</strong>: Responsive design, dark mode, modals, toasts, and fullscreen support.
+	</li>
+	<li><strong>AI Integration</strong>: Optional project/spec generation via Gemini API.</li>
 </ul>
 <h2>Tech Stack</h2>
 <ul>
-  <li><strong>Frontend</strong>: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, shadcn/ui (Radix-based), Heroicons, Lucide.</li>
-  <li><strong>Backend</strong>: Next.js API Routes, MongoDB with Mongoose, Clerk Authentication.</li>
-  <li><strong>State Management</strong>: Zustand.</li>
-  <li><strong>Development</strong>: ESLint, Prettier, PostCSS.</li>
+	<li>
+		<strong>Frontend</strong>: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS,
+		shadcn/ui (Radix-based), Heroicons, Lucide.
+	</li>
+	<li>
+		<strong>Backend</strong>: Next.js API Routes, MongoDB with Mongoose, Clerk Authentication.
+	</li>
+	<li><strong>State Management</strong>: Zustand.</li>
+	<li><strong>Development</strong>: ESLint, Prettier, PostCSS.</li>
 </ul>
 <h2>Getting Started</h2>
 <h3>Prerequisites</h3>
 <ul>
-  <li>Node.js 18.x or later</li>
-  <li>MongoDB database</li>
-  <li>Clerk account</li>
+	<li>Node.js 18.x or later</li>
+	<li>MongoDB database</li>
+	<li>Clerk account</li>
 </ul>
 <h3>Installation</h3>
 <ol>
-  <li>Clone the repo:
-    <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/shayandelbari/track-construction.git
+	<li>
+		Clone the repo:
+		<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/shayandelbari/track-construction.git
 <span class="hljs-built_in">cd</span> track-construction
 </code></pre>
-  </li>
-  <li>Install dependencies:
-    <pre><code class="hljs language-bash">pnpm install
+	</li>
+	<li>
+		Install dependencies:
+		<pre><code class="hljs language-bash">pnpm install
 </code></pre>
-  </li>
-  <li>Set up environment variables (copy <code>.env.example</code> to <code>.env</code>):
-    <ul>
-      <li><code>MONGODB_URI</code>: MongoDB connection string</li>
-      <li><code>NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY</code>: Clerk public key</li>
-      <li><code>CLERK_SECRET_KEY</code>: Clerk secret key</li>
-      <li><code>GEMINI_API_KEY</code>: Gemini API key (optional for AI features)</li>
-    </ul>
-  </li>
-  <li>Run the dev server:
-    <pre><code class="hljs language-bash">pnpm run dev
+	</li>
+	<li>
+		Set up environment variables (copy <code>.env.example</code> to <code>.env</code>):
+		<ul>
+			<li><code>MONGODB_URI</code>: MongoDB connection string</li>
+			<li><code>NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY</code>: Clerk public key</li>
+			<li><code>CLERK_SECRET_KEY</code>: Clerk secret key</li>
+			<li><code>GEMINI_API_KEY</code>: Gemini API key (optional for AI features)</li>
+		</ul>
+	</li>
+	<li>
+		Run the dev server:
+		<pre><code class="hljs language-bash">pnpm run dev
 </code></pre>
-  </li>
-  <li>Open <a href="http://localhost:3000">http://localhost:3000</a></li>
+	</li>
+	<li>Open <a href="http://localhost:3000">http://localhost:3000</a></li>
 </ol>
 <h2>Project Structure</h2>
 <pre><code>src/
@@ -62,16 +90,21 @@
 </code></pre>
 <h2>API &#x26; Authentication</h2>
 <ul>
-  <li>API routes under <code>src/app/api/</code> handle projects, specs, comments, files, permissions.</li>
-  <li>All endpoints require Clerk authentication (include <code>Authorization: Bearer &#x3C;token></code> in headers).</li>
-  <li>Roles: Owner (full access), Editor (edit specs/comments/files), Viewer (read-only).</li>
+	<li>
+		API routes under <code>src/app/api/</code> handle projects, specs, comments, files, permissions.
+	</li>
+	<li>
+		All endpoints require Clerk authentication (include
+		<code>Authorization: Bearer &#x3C;token></code> in headers).
+	</li>
+	<li>Roles: Owner (full access), Editor (edit specs/comments/files), Viewer (read-only).</li>
 </ul>
 <h2>Contributing</h2>
 <ol>
-  <li>Fork the repo</li>
-  <li>Create a feature branch</li>
-  <li>Commit changes</li>
-  <li>Push and open a PR</li>
+	<li>Fork the repo</li>
+	<li>Create a feature branch</li>
+	<li>Commit changes</li>
+	<li>Push and open a PR</li>
 </ol>
 <h2>License</h2>
 <p>MIT — see LICENSE file.</p>

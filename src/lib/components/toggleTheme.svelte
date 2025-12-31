@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Sun, Moon } from '$lib/icons';
-  import { Button } from '$lib/components/ui/button';
+	import { Sun, Moon } from '$lib/icons';
+	import { Button } from '$lib/components/ui/button';
 
 	let dark: boolean = $state(true);
 
@@ -10,12 +10,7 @@
 	};
 </script>
 
-<Button
-	aria-label="Toggle theme"
-	onclick={toggleTheme}
-  size="icon"
-  variant="outline"
->
+<Button aria-label="Toggle theme" onclick={toggleTheme} size="icon" variant="outline">
 	{#if dark}
 		<Sun class="stroke-white" />
 	{:else}
