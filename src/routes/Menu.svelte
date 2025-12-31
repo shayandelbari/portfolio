@@ -1,101 +1,70 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { ToggleTheme } from '$lib/components';
-	import { fade, fly } from 'svelte/transition';
+	import { Socials, ToggleTheme } from '$lib/components';
+	import { Button } from '$lib/components/ui/button';
+	import { Separator } from '$lib/components/ui/separator';
 	import { Resume } from '$lib/data';
 	import { Bars_3 } from '$lib/icons';
-	import { Button } from '$lib/components/ui/button';
-	import { Socials } from '$lib/components';
-	import { Separator } from '$lib/components/ui/separator';
+	import { scrollToSection } from '$lib/utils/scrollToSection';
+	import { useSectionObserver } from '$lib/utils/useSectionObserver';
+	import { fade, fly } from 'svelte/transition';
 
-	const menuItems = [
-		{ name: 'About', link: '#about' },
-		{ name: 'Experience', link: '#experience' },
-		{ name: 'Skills', link: '#skills' },
-		{ name: 'Projects', link: '#projects' },
-		{ name: 'Contact', link: '#contact' }
+	export const menuItems = [
+		{ name: 'About', id: 'about' },
+		{ name: 'Experience', id: 'experience' },
+		{ name: 'Skills', id: 'skills' },
+		{ name: 'Projects', id: 'projects' },
+		{ name: 'Contact', id: 'contact' }
 	];
 
-	const offset = 90; // Offset for scrolling (e.g., fixed header height)
+	const offset = 90;
+	let activeId = $state('');
 	let showMobileMenu = $state(false);
-	let activeItem = $state('');
 
-	function handleClick(event: MouseEvent): void {
-		event.preventDefault(); // Prevent default link behavior
+	useSectionObserver(
+		menuItems.map((i) => i.id),
+		(id) => (activeId = id),
+		offset
+	);
 
-		const targetId = (event.currentTarget as HTMLAnchorElement).getAttribute('href')?.substring(1);
-		const targetElement = document.getElementById(targetId!);
-
-		if (targetElement) {
-			const targetPosition = targetElement.offsetTop;
-			const scrollPosition = targetPosition - offset; // Adjust scroll position by the offset
-
-			window.scrollTo({
-				top: scrollPosition,
-				behavior: 'smooth'
-			});
-			activeItem = `#${targetId}`;
-		} else {
-			window.scrollTo({
-				top: 0,
-				behavior: 'smooth'
-			});
-			activeItem = '';
-		}
+	function handleClick(id: string) {
+		scrollToSection(id, offset);
+		activeId = id;
+		if (showMobileMenu) toggleMobileMenu();
 	}
 
-	function observeSections(): void {
-		const observerOptions = {
-			root: null, // Use the viewport as the root
-			rootMargin: `-${offset}px 0px 0px 0px`, // Account for the header height
-			threshold: 0.9 // Consider section active when 90% of it is in view
-		};
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				const targetId = entry.target.id;
-				if (entry.isIntersecting) {
-					activeItem = `#${targetId}`;
-				} else if (!entry.isIntersecting) {
-					activeItem = '';
-				}
-			});
-		}, observerOptions);
-
-		// Observe all sections referenced by menu items
-		menuItems.forEach(({ link }) => {
-			const sectionId = link.substring(1); // Remove the '#' to get the section ID
-			const section = document.getElementById(sectionId);
-			if (section) {
-				observer.observe(section);
-			}
-		});
-	}
-
-	function handleMobileMenu() {
+	function toggleMobileMenu() {
 		showMobileMenu = !showMobileMenu;
 		document.documentElement.classList.toggle('overflow-hidden');
 	}
-
-	onMount(() => {
-		observeSections();
-	});
 </script>
 
 <div class="sticky top-0 z-10">
 	<nav
-		class="grid h-auto min-h-[10vh] w-full grid-cols-3 items-center border-b border-border bg-background/70 p-5 shadow-lg shadow-black/5 backdrop-blur-md"
+		class="border-border bg-background/70 grid h-auto min-h-[10vh] w-full grid-cols-3 items-center border-b p-5 shadow-lg shadow-black/5 backdrop-blur-md"
 	>
-		<a href="/" onclick={handleClick}><strong>Shayan</strong> Delbari</a>
+		<a
+			href="/"
+			onclick={(e) => {
+				e.preventDefault();
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+				activeId = '';
+				if (showMobileMenu) toggleMobileMenu();
+			}}
+		>
+			<strong>Shayan</strong> Delbari
+		</a>
 		<div class="flex items-center justify-center space-x-4">
 			<ul class="hidden space-x-4 lg:flex">
 				{#each menuItems as item}
 					<li>
 						<a
-							href={item.link}
-							onclick={handleClick}
-							class="transition-colors duration-200 hover:text-primary
-                			{activeItem === item.link ? 'font-bold text-primary' : ''}"
+							href={item.id}
+							onclick={(e) => {
+								e.preventDefault();
+								handleClick(item.id);
+							}}
+							class="hover:text-primary transition-colors duration-200
+                			{activeId === item.id ? 'text-primary font-bold' : ''}"
 						>
 							{item.name}
 						</a>
@@ -112,7 +81,7 @@
 			<Button
 				aria-label="Toggle Menu"
 				class="flex lg:hidden"
-				onclick={handleMobileMenu}
+				onclick={toggleMobileMenu}
 				size="icon"
 				variant="outline"
 			>
@@ -126,20 +95,27 @@
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
 	<div
 		transition:fade={{ duration: 100 }}
-		class="fixed top-0 z-30 h-screen w-screen bg-background"
-		onclick={handleMobileMenu}
+		class="bg-background fixed top-0 z-30 h-screen w-screen"
+		onclick={toggleMobileMenu}
 	>
 		<div
 			transition:fly={{ duration: 300, x: 300 }}
 			onclick={(e) => {
 				e.stopPropagation();
 			}}
-			class="absolute right-0 flex h-screen w-fit flex-col border-l border-border bg-background"
+			class="border-border bg-background absolute right-0 flex h-screen w-fit flex-col border-l"
 		>
 			<ul class="mt-4 flex flex-col space-y-4 py-2">
 				{#each menuItems as item}
 					<li class="px-8">
-						<a href={item.link} onclick={handleClick} class="hover:text-primary">
+						<a
+							href={item.id}
+							onclick={(e) => {
+								e.preventDefault();
+								handleClick(item.id);
+							}}
+							class="hover:text-primary"
+						>
 							{item.name}
 						</a>
 					</li>
