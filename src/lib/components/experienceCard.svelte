@@ -7,7 +7,7 @@
 
 <div class="relative flex w-fit flex-row">
 	<div
-		class="absolute flex h-full w-1 bg-foreground
+		class="bg-foreground absolute flex h-full w-1
 		{length == 1
 			? 'rounded-full'
 			: index == 0
@@ -19,18 +19,18 @@
 	<div class="flex h-fit w-auto flex-col p-4">
 		<div class="flex flex-row">
 			<span
-				class="absolute -start-2 flex h-5 w-5 rounded-full border-4 border-background bg-primary"
+				class="border-background bg-primary absolute -start-2 flex h-5 w-5 rounded-full border-4"
 			></span>
 			<div class="flex font-bold">{experience.position}</div>
 		</div>
 		<div class="mt-2 flex w-full flex-row items-center justify-between">
-			<div class="h-fit w-fit rounded-md bg-foreground px-2 py-1 font-semibold text-background">
+			<div class="bg-foreground text-background h-fit w-fit rounded-md px-2 py-1 font-semibold">
 				{experience.company}
 			</div>
 			<div>{experience.start} - {experience.end}</div>
 		</div>
-		<p class="prose prose-neutral dark:prose-invert mt-2">
+		<article class="prose prose-gray prose-li:text-foreground/80 dark:prose-invert mt-2">
 			{@html experience.description}
-		</p>
+		</article>
 	</div>
 </div>
