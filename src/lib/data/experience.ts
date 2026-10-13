@@ -1,3 +1,4 @@
+import FreelanceDescription from '$lib/data/description/experience/freelanceSoftwareDeveloperDescription.html?raw';
 import Description3d from '$lib/data/description/experience/aryanDukeDescription3D.html?raw';
 import DescriptionGraphic from '$lib/data/description/experience/aryanDukeDescriptionGraphic.html?raw';
 import DescriptionWeb from '$lib/data/description/experience/aryanDukeDescriptionWeb.html?raw';
@@ -11,6 +12,13 @@ export interface Experience {
 }
 
 const experience: Experience[] = [
+	{
+		company: 'Upwork (Remote)',
+		position: 'Freelance Software Developer',
+		description: FreelanceDescription,
+		start: 'May 2024',
+		end: 'May 2025'
+	},
 	{
 		company: 'Aryan Duke Parsi',
 		position: 'Website Administrator and IT Specialist',

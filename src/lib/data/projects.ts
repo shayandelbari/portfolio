@@ -12,6 +12,7 @@ export interface Project {
 	firstPage: boolean;
 	url: string;
 	website?: string;
+	clientProject?: boolean;
 	language: string;
 	skills: string[];
 	commitSha: string;

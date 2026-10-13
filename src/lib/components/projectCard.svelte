@@ -15,7 +15,7 @@
 
 	let { project, popup = true }: { project: Project; popup?: boolean } = $props();
 	let show: boolean = $state(false);
-	let color = getLanguageColor(project.language);
+	let color = $derived(getLanguageColor(project.language));
 
 	const openPopup = () => {
 		show = true;
@@ -24,11 +24,21 @@
 </script>
 
 <Card.Root class="flex h-full flex-col">
-	<Card.Header class="flex-row items-center justify-between gap-1">
+	<Card.Header class="flex-row flex-wrap items-center justify-between gap-2">
 		<Card.Title>{project.name}</Card.Title>
-		<Badge style="background-color: {color}70; border: 1px solid {color}" variant="outline"
-			>{project.language}</Badge
-		>
+		<div class="flex flex-wrap items-center justify-end gap-2">
+			{#if project.clientProject}
+				<Badge
+					variant="outline"
+					class="border-primary/40 bg-primary/10 text-primary shadow-sm shadow-primary/10"
+				>
+					Client project
+				</Badge>
+			{/if}
+			<Badge style="background-color: {color}70; border: 1px solid {color}" variant="outline"
+				>{project.language}</Badge
+			>
+		</div>
 	</Card.Header>
 	<Card.Content class="grow">
 		{#if project.thumbnail}

@@ -6,6 +6,7 @@
 		"firstPage": true,
 		"url": "https://github.com/shayandelbari/track-construction",
 		"website": "https://track-construction.vercel.app",
+		"clientProject": true,
 		"language": "TypeScript",
 		"skills": [],
 		"commitSha": "3b7a5eb984c09a718672732c0d07068ba61ee09b"

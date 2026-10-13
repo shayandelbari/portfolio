@@ -16,4 +16,9 @@
 			</div>
 		</div>
 	</div>
+	<div class="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-sm text-muted-foreground">
+		<a href="tel:+14389302001" class="hover:underline">+1 (438) 930-2001</a>
+		<a href="mailto:shayandelbari0@gmail.com" class="hover:underline">shayandelbari0@gmail.com</a>
+		<span>Montreal, QC</span>
+	</div>
 </div>
