@@ -6,18 +6,3 @@
 	automation, and LLM integration. I enjoy learning unfamiliar technologies, solving practical
 	engineering problems, and working directly with clients and teammates.
 </p>
-
-<div class="mt-6 grid gap-6 md:grid-cols-2">
-	<div>
-		<h3 class="mb-2 text-xl font-semibold">Education</h3>
-		<p>DEC in Computer Science Technology</p>
-		<p>LaSalle College, Montreal, QC</p>
-		<p>April 2024 - Present</p>
-	</div>
-	<div>
-		<h3 class="mb-2 text-xl font-semibold">Languages</h3>
-		<p>English: Fluent</p>
-		<p>French: Working proficiency</p>
-		<p>Persian: Native</p>
-	</div>
-</div>
